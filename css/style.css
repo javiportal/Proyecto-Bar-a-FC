@@ -69,9 +69,8 @@ h6 { font-size: var(--font-size-lg); }
 
 /* ===== HERO PRINCIPAL (INDEX) ===== */
 .hero-main {
-  background: linear-gradient(rgba(0, 77, 152, 0.85), rgba(165, 0, 68, 0.85)), 
-              url('../img/hero-stadium.jpg') center/cover;
-  min-height: 500px;
+  background: url('../img/camp nou 1.webp') center/cover;
+  min-height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -81,29 +80,47 @@ h6 { font-size: var(--font-size-lg); }
 
 .hero-content h1 {
   color: var(--white);
-  font-size: 3.5rem;
+  font-size: 4rem;
   margin-bottom: var(--spacing-md);
-  letter-spacing: 2px;
+  letter-spacing: 3px;
+  text-shadow: 3px 3px 8px rgba(0,0,0,0.8);
+  animation: fadeInUp 1s ease-out;
+  font-weight: 900;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-subtitle {
   font-size: var(--font-size-xl);
   margin-bottom: var(--spacing-xl);
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+  animation: fadeInUp 1s ease-out 0.2s both;
 }
 
 .hero-buttons {
   display: flex;
   gap: var(--spacing-md);
   justify-content: center;
+  animation: fadeInUp 1s ease-out 0.4s both;
 }
 
 .header {
-  background-color: var(--barca-blue);
+  background: linear-gradient(135deg, var(--barca-blue), var(--barca-blue-dark));
   padding: var(--spacing-sm) 0;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  backdrop-filter: blur(10px);
 }
 
 .container {
@@ -116,20 +133,50 @@ h6 { font-size: var(--font-size-lg); }
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.1) rotate(5deg);
 }
 
 .logo h2 {
   color: var(--white);
   font-size: var(--font-size-xl);
   margin: 0;
+  font-weight: 800;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.logo:hover h2 {
+  color: var(--barca-gold);
 }
 
 .nav-menu {
   display: flex;
   list-style: none;
-  gap: var(--spacing-md);
+  gap: var(--spacing-sm);
   margin: 0;
   padding: 0;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .nav-menu li {
@@ -140,45 +187,108 @@ h6 { font-size: var(--font-size-lg); }
   color: var(--white);
   text-decoration: none;
   font-weight: 500;
-  transition: all 0.3s;
-  padding: var(--spacing-xs) var(--spacing-sm);
-  border-radius: 4px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 8px 12px;
+  border-radius: 6px;
   display: block;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.nav-menu a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.nav-menu a:hover::before {
+  left: 100%;
 }
 
 .nav-menu a:hover,
 .nav-menu a.active {
   background-color: var(--barca-red);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(165, 0, 68, 0.3);
 }
 
 .btn-primary {
-  background-color: var(--barca-gold);
+  background: linear-gradient(135deg, var(--barca-gold), #D4A100);
   color: var(--black);
-  padding: 12px 30px;
-  border-radius: 6px;
+  padding: 14px 32px;
+  border-radius: 8px;
   text-decoration: none;
-  font-weight: 600;
-  transition: background-color 0.3s;
+  font-weight: 700;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(237, 187, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: left 0.6s;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
 }
 
 .btn-primary:hover {
-  background-color: #D4A100;
+  background: linear-gradient(135deg, #D4A100, var(--barca-gold));
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(237, 187, 0, 0.4);
 }
 
 .btn-secondary {
   background-color: transparent;
   color: var(--white);
-  padding: 12px 30px;
+  padding: 14px 32px;
   border: 2px solid var(--white);
-  border-radius: 6px;
+  border-radius: 8px;
   text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s;
+  font-weight: 700;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-secondary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--white);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
 }
 
 .btn-secondary:hover {
-  background-color: var(--white);
   color: var(--barca-blue);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+}
+
+.btn-secondary:hover::before {
+  width: 100%;
 }
 
 /* ===== NOTICIAS HOME ===== */
@@ -202,11 +312,29 @@ h6 { font-size: var(--font-size-lg); }
   color: var(--barca-red);
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  padding: 8px 0;
+}
+
+.link-ver-mas::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--barca-blue);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-ver-mas:hover {
   color: var(--barca-blue);
+  transform: translateX(5px);
+}
+
+.link-ver-mas:hover::after {
+  width: 100%;
 }
 
 .noticias-home-grid {
@@ -217,14 +345,17 @@ h6 { font-size: var(--font-size-lg); }
 
 .noticia-home-card {
   background-color: var(--white);
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(0, 77, 152, 0.1);
 }
 
 .noticia-home-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(0, 77, 152, 0.15);
+  border-color: var(--barca-blue);
 }
 
 .noticia-home-imagen {
@@ -243,12 +374,19 @@ h6 { font-size: var(--font-size-lg); }
   position: absolute;
   top: 10px;
   left: 10px;
-  background-color: var(--barca-red);
+  background: linear-gradient(135deg, var(--barca-red), var(--barca-red-dark));
   color: var(--white);
-  padding: 5px 12px;
-  border-radius: 4px;
-  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 700;
   font-size: 0.85rem;
+  box-shadow: 0 2px 8px rgba(165, 0, 68, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.noticia-home-card:hover .badge-home {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(165, 0, 68, 0.4);
 }
 
 .noticia-home-info {
@@ -280,10 +418,29 @@ h6 { font-size: var(--font-size-lg); }
   text-decoration: none;
   font-weight: 600;
   font-size: 0.9rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  padding: 4px 0;
+}
+
+.link-noticia::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--barca-blue);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-noticia:hover {
   color: var(--barca-blue);
+  transform: translateX(3px);
+}
+
+.link-noticia:hover::after {
+  width: 100%;
 }
 
 /* ===== PRÓXIMO PARTIDO ===== */
@@ -333,6 +490,10 @@ h6 { font-size: var(--font-size-lg); }
   justify-content: space-around;
   align-items: center;
   margin: var(--spacing-xl) 0;
+  padding: var(--spacing-lg);
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
 }
 
 .equipo {
@@ -340,10 +501,20 @@ h6 { font-size: var(--font-size-lg); }
 }
 
 .equipo img {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   object-fit: contain;
   margin-bottom: var(--spacing-sm);
+  border-radius: 50%;
+  background-color: var(--white);
+  padding: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.equipo:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 77, 152, 0.2);
 }
 
 .equipo h3 {
@@ -368,19 +539,41 @@ h6 { font-size: var(--font-size-lg); }
 
 .btn-ver-calendario {
   display: block;
-  background-color: var(--barca-blue);
+  background: linear-gradient(135deg, var(--barca-blue), var(--barca-blue-dark));
   color: var(--white);
   text-align: center;
-  padding: 12px;
-  border-radius: 6px;
+  padding: 14px 24px;
+  border-radius: 8px;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   margin-top: var(--spacing-lg);
-  transition: background-color 0.3s;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(0, 77, 152, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-ver-calendario::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.6s;
+}
+
+.btn-ver-calendario:hover::before {
+  left: 100%;
 }
 
 .btn-ver-calendario:hover {
-  background-color: var(--barca-red);
+  background: linear-gradient(135deg, var(--barca-red), var(--barca-red-dark));
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(165, 0, 68, 0.4);
 }
 
 /* ===== ESTADÍSTICAS ===== */
@@ -398,15 +591,20 @@ h6 { font-size: var(--font-size-lg); }
 .stat-card {
   background-color: var(--white);
   padding: var(--spacing-lg);
-  border-radius: 8px;
+  border-radius: 12px;
   text-align: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0, 77, 152, 0.1);
 }
+
+
 
 .stat-icon {
   font-size: 2.5rem;
   margin-bottom: var(--spacing-sm);
+  display: inline-block;
 }
+
 
 .stat-number {
   color: var(--barca-blue);
@@ -414,6 +612,7 @@ h6 { font-size: var(--font-size-lg); }
   font-weight: 900;
   margin-bottom: var(--spacing-xs);
 }
+
 
 .stat-label {
   color: var(--gray-medium);
@@ -434,43 +633,68 @@ h6 { font-size: var(--font-size-lg); }
 
 .jugador-card {
   background-color: var(--white);
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(0, 77, 152, 0.1);
+  position: relative;
 }
 
 .jugador-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(0, 77, 152, 0.15);
+  border-color: var(--barca-blue);
+}
+
+.jugador-card:hover .jugador-numero {
+  background-color: var(--barca-red);
+  transform: scale(1.1);
 }
 
 .jugador-imagen {
   position: relative;
-  height: 280px;
+  height: 300px;
   overflow: hidden;
-  background-color: var(--gray-lighter);
+  background: linear-gradient(135deg, var(--gray-lighter), var(--white));
+  border-radius: 12px 12px 0 0;
 }
 
 .jugador-imagen img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.jugador-card:hover .jugador-imagen img {
+  transform: scale(1.05);
 }
 
 .jugador-numero {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: var(--barca-blue);
+  top: 15px;
+  right: 15px;
+  background: linear-gradient(135deg, var(--barca-blue), var(--barca-blue-dark));
   color: var(--white);
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 900;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 6px 20px rgba(0, 77, 152, 0.4);
+  border: 3px solid var(--white);
+}
+
+.jugador-card:hover .jugador-numero {
+  background: linear-gradient(135deg, var(--barca-red), var(--barca-red-dark));
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(165, 0, 68, 0.5);
 }
 
 .jugador-info {
@@ -512,9 +736,12 @@ h6 { font-size: var(--font-size-lg); }
 
 .footer-content {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--spacing-lg);
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
   margin-bottom: var(--spacing-lg);
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer-section h3,
@@ -542,29 +769,32 @@ h6 { font-size: var(--font-size-lg); }
 .footer-section a {
   color: var(--gray-light);
   text-decoration: none;
-  transition: color 0.3s;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   font-size: 0.95rem;
+  position: relative;
+  padding: 2px 0;
+}
+
+.footer-section a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--barca-gold);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-section a:hover {
   color: var(--barca-gold);
+  transform: translateX(3px);
 }
 
-.social-links {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-xs);
+.footer-section a:hover::after {
+  width: 100%;
 }
 
-.social-link {
-  color: var(--gray-light);
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.social-link:hover {
-  color: var(--barca-gold);
-}
 
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.1);
@@ -574,10 +804,268 @@ h6 { font-size: var(--font-size-lg); }
   font-size: 0.9rem;
 }
 
+/* ===== PÁGINA GALERÍA ===== */
+.page-hero {
+  background: linear-gradient(135deg, var(--barca-blue), var(--barca-red));
+  padding: var(--spacing-xl) 0;
+  text-align: center;
+  color: var(--white);
+}
+
+.page-hero-content h1 {
+  color: var(--white);
+  font-size: var(--font-size-4xl);
+  margin-bottom: var(--spacing-sm);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.page-hero-content p {
+  font-size: var(--font-size-lg);
+  opacity: 0.9;
+}
+
+.galeria-filtros {
+  padding: var(--spacing-lg) 0;
+  background-color: var(--gray-lighter);
+}
+
+.filtros-buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.filtro-btn {
+  background-color: var(--white);
+  color: var(--barca-blue);
+  border: 2px solid var(--barca-blue);
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+.filtro-btn:hover,
+.filtro-btn.active {
+  background-color: var(--barca-blue);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 77, 152, 0.3);
+}
+
+.galeria-principal {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--white);
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.galeria-item {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: var(--white);
+}
+
+.galeria-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 77, 152, 0.15);
+}
+
+.galeria-imagen {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.galeria-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.galeria-item:hover .galeria-imagen img {
+  transform: scale(1.05);
+}
+
+.galeria-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 77, 152, 0.9) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--spacing-md);
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.galeria-item:hover .galeria-overlay {
+  opacity: 1;
+}
+
+.galeria-info {
+  margin-bottom: var(--spacing-sm);
+}
+
+.galeria-info h3 {
+  color: var(--white);
+  font-size: 1.3rem;
+  margin-bottom: var(--spacing-xs);
+  font-weight: 700;
+}
+
+.galeria-info p {
+  color: var(--white);
+  opacity: 0.9;
+  font-size: 0.9rem;
+}
+
+.galeria-ver {
+  background: linear-gradient(135deg, var(--barca-gold), #D4A100);
+  color: var(--black);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+}
+
+.galeria-ver:hover {
+  background: linear-gradient(135deg, #D4A100, var(--barca-gold));
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(237, 187, 0, 0.4);
+}
+
+/* Modal de galería */
+.modal-galeria {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  position: relative;
+  margin: 5% auto;
+  width: 90%;
+  max-width: 800px;
+  background-color: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.modal-cerrar {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 2001;
+  background-color: rgba(0,0,0,0.5);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.modal-cerrar:hover {
+  background-color: var(--barca-red);
+  transform: scale(1.1);
+}
+
+#modal-imagen {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.modal-info {
+  padding: var(--spacing-lg);
+  text-align: center;
+}
+
+.modal-info h3 {
+  color: var(--barca-blue);
+  font-size: 1.8rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.modal-info p {
+  color: var(--gray-dark);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .nav-menu {
+    gap: var(--spacing-xs);
+  }
+  
+  .nav-menu a {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+}
+
 @media (max-width: 768px) {
   .hero-content h1 {
     font-size: 2rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-secondary {
+    width: 100%;
+    max-width: 250px;
   }
   
   .noticias-home-grid {
@@ -592,16 +1080,136 @@ h6 { font-size: var(--font-size-lg); }
     grid-template-columns: repeat(2, 1fr);
   }
   
+  .jugador-imagen {
+    height: 250px;
+  }
+  
+  .jugador-numero {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+    top: 10px;
+    right: 10px;
+  }
+  
   .footer-content {
     grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    text-align: center;
+  }
+  
+  .galeria-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+  }
+  
+  .filtros-buttons {
+    gap: var(--spacing-xs);
+  }
+  
+  .filtro-btn {
+    padding: 8px 16px;
+    font-size: 0.8rem;
   }
   
   .partido-equipos {
     flex-direction: column;
     gap: var(--spacing-lg);
+    padding: var(--spacing-md);
+  }
+  
+  .equipo img {
+    width: 100px;
+    height: 100px;
   }
   
   .vs {
     transform: rotate(90deg);
+  }
+  
+  .navbar {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) 0;
+  }
+  
+  .nav-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-xs);
+  }
+  
+  .nav-menu a {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+  
+  .logo {
+    justify-content: center;
+  }
+  
+  .logo-img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .logo h2 {
+    font-size: var(--font-size-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .jugadores-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-main {
+    min-height: 400px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+  
+  .hero-subtitle {
+    font-size: var(--font-size-lg);
+  }
+  
+  .equipo img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .jugador-imagen {
+    height: 220px;
+  }
+  
+  .jugador-numero {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+  
+  .galeria-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+  }
+  
+  .galeria-imagen {
+    height: 200px;
+  }
+  
+  .modal-content {
+    width: 95%;
+    margin: 10% auto;
+  }
+  
+  .page-hero-content h1 {
+    font-size: var(--font-size-3xl);
   }
 }
