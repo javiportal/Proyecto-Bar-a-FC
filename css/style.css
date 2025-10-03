@@ -1,5 +1,5 @@
-/* ===== VARIABLES DE DISEÑO FC BARCELONA ===== */
 :root {
+<<<<<<< Updated upstream
     /* Colores principales */
     --barca-blue: #004D98;
     --barca-blue-dark: #003366;
@@ -36,6 +36,1049 @@
     --spacing-md: 1.5rem;
     --spacing-lg: 2rem;
     --spacing-xl: 3rem;
+=======
+  /*creamos las variables de los colores*/
+  --barca-blue: #004D98;
+  --barca-blue-dark: #003366;
+  --barca-red: #A50044;
+  --barca-red-dark: #7A0033;
+  --barca-gold: #EDBB00;
+  
+  /* creamos las variables de los colores neutros */
+  --white: #FFFFFF;
+  --black: #000000;
+  --gray-dark: #2B2B2B;
+  --gray-medium: #666666;
+  --gray-light: #E5E5E5;
+  --gray-lighter: #F5F5F5;
+  
+  /* creamos las variables de la tipografia */
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+  
+  /* creamos las variables de los tamaños */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  
+  /* creamos las variables de los espaciados */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--gray-dark);
+  line-height: 1.6;
+  background-color: var(--white);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--barca-blue);
+  line-height: 1.2;
+}
+
+h1 { font-size: var(--font-size-5xl); }
+h2 { font-size: var(--font-size-4xl); }
+h3 { font-size: var(--font-size-3xl); }
+h4 { font-size: var(--font-size-2xl); }
+h5 { font-size: var(--font-size-xl); }
+h6 { font-size: var(--font-size-lg); }
+
+
+.hero-main {
+  background: url('../img/camp nou 1.webp') center/cover;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+}
+
+.hero-content h1 {
+  color: var(--white);
+  font-size: 4rem;
+  margin-bottom: var(--spacing-md);
+  letter-spacing: 3px;
+  text-shadow: 3px 3px 8px rgba(0,0,0,0.8);
+  animation: fadeInUp 1s ease-out;
+  font-weight: 900;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-subtitle {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-xl);
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.header {
+  background: linear-gradient(135deg, var(--barca-blue), var(--barca-blue-dark));
+  padding: var(--spacing-sm) 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  backdrop-filter: blur(10px);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.logo h2 {
+  color: var(--white);
+  font-size: var(--font-size-xl);
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.logo:hover h2 {
+  color: var(--barca-gold);
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: var(--spacing-sm);
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-menu li {
+  list-style: none;
+}
+
+.nav-menu a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 8px 12px;
+  border-radius: 6px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.nav-menu a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.nav-menu a:hover::before {
+  left: 100%;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  background-color: var(--barca-red);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(165, 0, 68, 0.3);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--barca-gold), #D4A100);
+  color: var(--black);
+  padding: 14px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(237, 187, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: left 0.6s;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #D4A100, var(--barca-gold));
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(237, 187, 0, 0.4);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--white);
+  padding: 14px 32px;
+  border: 2px solid var(--white);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-secondary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--white);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+}
+
+.btn-secondary:hover {
+  color: var(--barca-blue);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+}
+
+.btn-secondary:hover::before {
+  width: 100%;
+}
+
+.home-noticias {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--white);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.section-header h2 {
+  color: var(--barca-blue);
+}
+
+.link-ver-mas {
+  color: var(--barca-red);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  padding: 8px 0;
+}
+
+.link-ver-mas::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--barca-blue);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link-ver-mas:hover {
+  color: var(--barca-blue);
+  transform: translateX(5px);
+}
+
+.link-ver-mas:hover::after {
+  width: 100%;
+}
+
+.noticias-home-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.noticia-home-card {
+  background-color: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(0, 77, 152, 0.1);
+}
+
+.noticia-home-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(0, 77, 152, 0.15);
+  border-color: var(--barca-blue);
+}
+
+.noticia-home-imagen {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.noticia-home-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.badge-home {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: linear-gradient(135deg, var(--barca-red), var(--barca-red-dark));
+  color: var(--white);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  box-shadow: 0 2px 8px rgba(165, 0, 68, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.noticia-home-card:hover .badge-home {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(165, 0, 68, 0.4);
+}
+
+.noticia-home-info {
+  padding: var(--spacing-md);
+}
+
+.fecha-home {
+  display: block;
+  color: var(--gray-medium);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+.noticia-home-info h3 {
+  color: var(--barca-blue);
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.noticia-home-info p {
+  color: var(--gray-dark);
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.link-noticia {
+  color: var(--barca-red);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  padding: 4px 0;
+}
+
+.link-noticia::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--barca-blue);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link-noticia:hover {
+  color: var(--barca-blue);
+  transform: translateX(3px);
+}
+
+.link-noticia:hover::after {
+  width: 100%;
+}
+
+/* ===== PRÓXIMO PARTIDO ===== */
+.proximo-partido {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--barca-blue);
+  color: var(--white);
+}
+
+.proximo-partido h2 {
+  color: var(--white);
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.partido-card {
+  background-color: var(--white);
+  border-radius: 12px;
+  padding: var(--spacing-xl);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.partido-info .competicion {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.competicion-badge {
+  display: inline-block;
+  background-color: var(--barca-gold);
+  color: var(--black);
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.fecha-partido {
+  display: block;
+  color: var(--gray-medium);
+  margin-top: var(--spacing-xs);
+}
+
+.partido-equipos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: var(--spacing-xl) 0;
+  padding: var(--spacing-lg);
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+}
+
+.equipo {
+  text-align: center;
+}
+
+.equipo img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: var(--spacing-sm);
+  border-radius: 50%;
+  background-color: var(--white);
+  padding: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.equipo:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 77, 152, 0.2);
+}
+
+.equipo h3 {
+  color: var(--barca-blue);
+  font-size: 1.5rem;
+}
+
+.vs {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--barca-red);
+}
+
+.partido-estadio {
+  text-align: center;
+  margin: var(--spacing-lg) 0;
+}
+
+.partido-estadio p {
+  color: var(--gray-medium);
+}
+
+.btn-ver-calendario {
+  display: block;
+  background: linear-gradient(135deg, var(--barca-blue), var(--barca-blue-dark));
+  color: var(--white);
+  text-align: center;
+  padding: 14px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: var(--spacing-lg);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(0, 77, 152, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-ver-calendario::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.6s;
+}
+
+.btn-ver-calendario:hover::before {
+  left: 100%;
+}
+
+.btn-ver-calendario:hover {
+  background: linear-gradient(135deg, var(--barca-red), var(--barca-red-dark));
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(165, 0, 68, 0.4);
+}
+
+/* ===== ESTADÍSTICAS ===== */
+.stats-section {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--gray-lighter);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.stat-card {
+  background-color: var(--white);
+  padding: var(--spacing-lg);
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0, 77, 152, 0.1);
+}
+
+
+
+.stat-icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-sm);
+  display: inline-block;
+}
+
+
+.stat-number {
+  color: var(--barca-blue);
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: var(--spacing-xs);
+}
+
+
+.stat-label {
+  color: var(--gray-medium);
+  font-size: 1rem;
+}
+
+/* ===== JUGADORES DESTACADOS ===== */
+.jugadores-destacados {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--white);
+}
+
+.jugadores-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.jugador-card {
+  background-color: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(0, 77, 152, 0.1);
+  position: relative;
+}
+
+.jugador-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(0, 77, 152, 0.15);
+  border-color: var(--barca-blue);
+}
+
+.jugador-card:hover .jugador-numero {
+  background-color: var(--barca-red);
+  transform: scale(1.1);
+}
+
+.jugador-imagen {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--gray-lighter), var(--white));
+  border-radius: 12px 12px 0 0;
+}
+
+.jugador-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.jugador-card:hover .jugador-imagen img {
+  transform: scale(1.05);
+}
+
+.jugador-numero {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: linear-gradient(135deg, var(--barca-blue), var(--barca-blue-dark));
+  color: var(--white);
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: 900;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 6px 20px rgba(0, 77, 152, 0.4);
+  border: 3px solid var(--white);
+}
+
+.jugador-card:hover .jugador-numero {
+  background: linear-gradient(135deg, var(--barca-red), var(--barca-red-dark));
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(165, 0, 68, 0.5);
+}
+
+.jugador-info {
+  padding: var(--spacing-md);
+  text-align: center;
+}
+
+.jugador-info h3 {
+  color: var(--barca-blue);
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+.jugador-posicion {
+  color: var(--gray-medium);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.jugador-stats {
+  display: flex;
+  justify-content: space-around;
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid var(--gray-light);
+}
+
+.jugador-stats span {
+  font-size: 0.85rem;
+  color: var(--gray-dark);
+  font-weight: 500;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background-color: var(--gray-dark);
+  color: var(--white);
+  padding: var(--spacing-xl) 0 var(--spacing-md);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-lg);
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  color: var(--barca-gold);
+  margin-bottom: var(--spacing-sm);
+  font-size: 1.2rem;
+}
+
+.footer-desc {
+  color: var(--gray-light);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-top: var(--spacing-sm);
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: var(--spacing-xs);
+}
+
+.footer-section a {
+  color: var(--gray-light);
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 0.95rem;
+  position: relative;
+  padding: 2px 0;
+}
+
+.footer-section a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--barca-gold);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-section a:hover {
+  color: var(--barca-gold);
+  transform: translateX(3px);
+}
+
+.footer-section a:hover::after {
+  width: 100%;
+}
+
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: var(--spacing-md);
+  text-align: center;
+  color: var(--gray-light);
+  font-size: 0.9rem;
+}
+
+/* ===== PÁGINA GALERÍA ===== */
+.page-hero {
+  background: linear-gradient(135deg, var(--barca-blue), var(--barca-red));
+  padding: var(--spacing-xl) 0;
+  text-align: center;
+  color: var(--white);
+}
+
+.page-hero-content h1 {
+  color: var(--white);
+  font-size: var(--font-size-4xl);
+  margin-bottom: var(--spacing-sm);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.page-hero-content p {
+  font-size: var(--font-size-lg);
+  opacity: 0.9;
+}
+
+.galeria-filtros {
+  padding: var(--spacing-lg) 0;
+  background-color: var(--gray-lighter);
+}
+
+.filtros-buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.filtro-btn {
+  background-color: var(--white);
+  color: var(--barca-blue);
+  border: 2px solid var(--barca-blue);
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+.filtro-btn:hover,
+.filtro-btn.active {
+  background-color: var(--barca-blue);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 77, 152, 0.3);
+}
+
+.galeria-principal {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--white);
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.galeria-item {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: var(--white);
+}
+
+.galeria-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 77, 152, 0.15);
+}
+
+.galeria-imagen {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.galeria-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.galeria-item:hover .galeria-imagen img {
+  transform: scale(1.05);
+}
+
+.galeria-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 77, 152, 0.9) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--spacing-md);
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.galeria-item:hover .galeria-overlay {
+  opacity: 1;
+}
+
+.galeria-info {
+  margin-bottom: var(--spacing-sm);
+}
+
+.galeria-info h3 {
+  color: var(--white);
+  font-size: 1.3rem;
+  margin-bottom: var(--spacing-xs);
+  font-weight: 700;
+}
+
+.galeria-info p {
+  color: var(--white);
+  opacity: 0.9;
+  font-size: 0.9rem;
+}
+
+.galeria-ver {
+  background: linear-gradient(135deg, var(--barca-gold), #D4A100);
+  color: var(--black);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+}
+
+.galeria-ver:hover {
+  background: linear-gradient(135deg, #D4A100, var(--barca-gold));
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(237, 187, 0, 0.4);
+}
+
+/* Modal de galería */
+.modal-galeria {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  position: relative;
+  margin: 5% auto;
+  width: 90%;
+  max-width: 800px;
+  background-color: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.modal-cerrar {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 2001;
+  background-color: rgba(0,0,0,0.5);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.modal-cerrar:hover {
+  background-color: var(--barca-red);
+  transform: scale(1.1);
+}
+
+#modal-imagen {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.modal-info {
+  padding: var(--spacing-lg);
+  text-align: center;
+}
+
+.modal-info h3 {
+  color: var(--barca-blue);
+  font-size: 1.8rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.modal-info p {
+  color: var(--gray-dark);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .nav-menu {
+    gap: var(--spacing-xs);
+>>>>>>> Stashed changes
   }
   
   /* ===== ESTILOS BASE ===== */
