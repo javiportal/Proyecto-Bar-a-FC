@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - FC Barcelona</title>
+    <link rel="stylesheet" href="../css/contacto_style.css">
+</head>
+<body>
+    <section class="contacto-section">
+        <div class="contacto-header">
+            <h1>Contacto</h1>
+            <p>¿Tienes alguna pregunta o comentario? Estamos aquí para ayudarte. Contáctanos y te responderemos lo antes posible.</p>
+        </div>
+
+        <div class="contacto-container">
+            <!-- INFORMACIÓN DE CONTACTO -->
+            <div class="contacto-info">
+                <h2>Información de Contacto</h2>
+                
+                <div class="info-item">
+                    <div class="info-icon">📍</div>
+                    <div class="info-content">
+                        <h3>Dirección</h3>
+                        <p>C. d'Arístides Maillol, 12<br>08028 Barcelona, España</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">📧</div>
+                    <div class="info-content">
+                        <h3>Correo Electrónico</h3>
+                        <p>info@fcbarcelona.com<br>socios@fcbarcelona.com</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">📞</div>
+                    <div class="info-content">
+                        <h3>Teléfono</h3>
+                        <p>+34 902 18 99 00<br>Lunes a Viernes: 9:00 - 18:00h</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FORMULARIO DE CONTACTO -->
+            <div class="formulario-contacto">
+                <h2>Envíanos un Mensaje</h2>
+                
+                <div class="mensaje-exito" id="mensajeExito">
+                    ✓ ¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.
+                </div>
+
+                <form id="formContacto" novalidate>
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo <span>*</span></label>
+                        <input 
+                            type="text" 
+                            id="nombre" 
+                            name="nombre" 
+                            placeholder="Ej: Juan Pérez"
+                            required
+                            minlength="3"
+                            maxlength="50"
+                            pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+"
+                        >
+                        <span class="error-message">Por favor, ingresa un nombre válido (mínimo 3 caracteres, solo letras)</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="correo">Correo Electrónico <span>*</span></label>
+                        <input 
+                            type="email" 
+                            id="correo" 
+                            name="correo" 
+                            placeholder="ejemplo@correo.com"
+                            required
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                        >
+                        <span class="error-message">Por favor, ingresa un correo electrónico válido</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Teléfono <span>*</span></label>
+                        <input 
+                            type="tel" 
+                            id="telefono" 
+                            name="telefono" 
+                            placeholder="Ej: +34 612345678 o 61234567"
+                            required
+                            pattern="[+]?[0-9]{8,15}"
+                            minlength="8"
+                            maxlength="15"
+                        >
+                        <span class="error-message">Por favor, ingresa un número de teléfono válido (8-15 dígitos)</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje <span>*</span></label>
+                        <textarea 
+                            id="mensaje" 
+                            name="mensaje" 
+                            placeholder="Escribe tu mensaje aquí..."
+                            required
+                            minlength="10"
+                            maxlength="500"
+                        ></textarea>
+                        <span class="error-message">Por favor, ingresa un mensaje (mínimo 10 caracteres)</span>
+                    </div>
+
+                    <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Validación y envío del formulario
+        const form = document.getElementById('formContacto');
+        const mensajeExito = document.getElementById('mensajeExito');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (form.checkValidity()) {
+                mensajeExito.style.display = 'block';
+                form.reset();
+                
+                setTimeout(() => {
+                    mensajeExito.style.display = 'none';
+                }, 5000);
+                
+                mensajeExito.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } else {
+                form.reportValidity();
+            }
+        });
+
+        const inputs = form.querySelectorAll('input, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('blur', function() {
+                if (this.value) {
+                    this.checkValidity();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

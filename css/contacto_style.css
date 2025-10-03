@@ -1,0 +1,417 @@
+/*  IMPORTAR FUENTES  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+/*  VARIABLES DEL FC BARCELONA  */
+:root {
+  --barca-blue: #004D98;
+  --barca-blue-dark: #003366;
+  --barca-red: #A50044;
+  --barca-red-dark: #7A0033;
+  --barca-gold: #EDBB00;
+  --white: #FFFFFF;
+  --black: #000000;
+  --gray-dark: #2B2B2B;
+  --gray-medium: #666666;
+  --gray-light: #E5E5E5;
+  --gray-lighter: #F5F5F5;
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+}
+
+/*  ESTILOS BASE  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background: linear-gradient(135deg, #f5f7fa 0%, #e3e9f0 100%);
+}
+
+/*  SECCIÓN CONTACTO  */
+.contacto-section {
+  padding: 60px 20px;
+  min-height: 100vh;
+}
+
+.contacto-header {
+  text-align: center;
+  margin-bottom: 50px;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contacto-header h1 {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--barca-blue);
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 77, 152, 0.1);
+}
+
+.contacto-header p {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  color: var(--gray-medium);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.contacto-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*  INFORMACIÓN DE CONTACTO  */
+.contacto-info {
+  background: linear-gradient(135deg, var(--barca-blue) 0%, var(--barca-blue-dark) 100%);
+  padding: 45px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 77, 152, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.contacto-info::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(237, 187, 0, 0.1) 0%, transparent 70%);
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.contacto-info h2 {
+  font-family: var(--font-heading);
+  color: var(--barca-gold);
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 35px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 1;
+}
+
+.info-item {
+  display: flex;
+  align-items: start;
+  margin-bottom: 30px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  border: 2px solid rgba(237, 187, 0, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.info-item:hover {
+  transform: translateX(15px);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--barca-gold);
+  box-shadow: 0 5px 20px rgba(237, 187, 0, 0.3);
+}
+
+.info-icon {
+  font-size: 2.5rem;
+  margin-right: 20px;
+  min-width: 60px;
+  text-align: center;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.info-content h3 {
+  font-family: var(--font-heading);
+  color: var(--white);
+  margin-bottom: 8px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-content p {
+  font-family: var(--font-body);
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+/*  FORMULARIO DE CONTACTO  */
+.formulario-contacto {
+  background: var(--white);
+  padding: 45px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  border-top: 5px solid var(--barca-red);
+}
+
+.formulario-contacto h2 {
+  font-family: var(--font-heading);
+  color: var(--barca-blue);
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 35px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  font-family: var(--font-heading);
+  color: var(--gray-dark);
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group label span {
+  color: var(--barca-red);
+  font-size: 1.2rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 15px 20px;
+  border: 2px solid var(--gray-light);
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: var(--font-body);
+  transition: all 0.3s ease;
+  background: var(--gray-lighter);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--barca-blue);
+  background: var(--white);
+  box-shadow: 0 0 0 4px rgba(0, 77, 152, 0.1);
+  transform: translateY(-2px);
+}
+
+.form-group input:invalid:not(:placeholder-shown),
+.form-group textarea:invalid:not(:placeholder-shown) {
+  border-color: var(--barca-red);
+  background: #fff5f5;
+}
+
+.form-group input:valid:not(:placeholder-shown),
+.form-group textarea:valid:not(:placeholder-shown) {
+  border-color: #00a651;
+  background: var(--white);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+  font-family: var(--font-body);
+}
+
+/* MENSAJES DE ERROR  */
+.error-message {
+  color: var(--barca-red);
+  font-size: 0.85rem;
+  font-family: var(--font-body);
+  margin-top: 8px;
+  display: none;
+  font-weight: 500;
+  padding-left: 5px;
+}
+
+.form-group input:invalid:not(:placeholder-shown) ~ .error-message,
+.form-group textarea:invalid:not(:placeholder-shown) ~ .error-message {
+  display: block;
+  animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+/*  BOTÓN ENVIAR  */
+.btn-enviar {
+  background: linear-gradient(135deg, var(--barca-blue) 0%, var(--barca-red) 100%);
+  color: var(--white);
+  padding: 18px 40px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  box-shadow: 0 8px 20px rgba(0, 77, 152, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-enviar::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn-enviar:hover::before {
+  width: 400px;
+  height: 400px;
+}
+
+.btn-enviar:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 77, 152, 0.5);
+}
+
+.btn-enviar:active {
+  transform: translateY(-1px);
+}
+
+.btn-enviar:disabled {
+  background: var(--gray-medium);
+  cursor: not-allowed;
+  transform: none;
+  opacity: 0.6;
+}
+
+/*  MENSAJE DE ENVIADO CON ÉXITO   */
+.mensaje-exito {
+  background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+  color: #155724;
+  padding: 15px 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  border: 2px solid #c3e6cb;
+  border-left: 5px solid #28a745;
+  display: none;
+  text-align: center;
+  font-weight: 600;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*  RESPONSIVO  */
+@media (max-width: 1024px) {
+  .contacto-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contacto-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .contacto-header p {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+
+  .formulario-contacto,
+  .contacto-info {
+    padding: 30px;
+  }
+  
+  .info-item:hover {
+    transform: translateX(8px);
+  }
+
+  .btn-enviar {
+    font-size: 1rem;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contacto-section {
+    padding: 40px 15px;
+  }
+
+  .contacto-header h1 {
+    font-size: 2rem;
+  }
+
+  .info-icon {
+    font-size: 2rem;
+    min-width: 50px;
+  }
+
+  .contacto-info h2,
+  .formulario-contacto h2 {
+    font-size: 1.8rem;
+  }
+}
