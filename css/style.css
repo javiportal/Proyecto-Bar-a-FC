@@ -1,40 +1,25 @@
 :root {
-    /* Main Colors */
-    --barca-blue: #004D98;
-    --barca-blue-dark: #003366;
-    --barca-red: #A50044;
-    --barca-red-dark: #7A0033;
-    --barca-gold: #EDBB00;
-    
-    /* Neutros */
-    --white: #FFFFFF;
-    --black: #000000;
-    --gray-dark: #2B2B2B;
-    --gray-medium: #666666;
-    --gray-light: #E5E5E5;
-    --gray-lighter: #F5F5F5;
-    
-    /* Tipografía */
-    --font-heading: 'Poppins', sans-serif;
-    --font-body: 'Roboto', sans-serif;
+  /* Color variables removed per request; colors inlined as hex literals throughout the file. */
+  /* Fonts */
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Roboto', sans-serif;
 
-    /* Font Sizes */
-    --font-size-xs: 0.75rem;
-    --font-size-sm: 0.875rem;
-    --font-size-base: 1rem;
-    --font-size-lg: 1.125rem;
-    --font-size-xl: 1.25rem;
-    --font-size-2xl: 1.5rem;
-    --font-size-3xl: 1.875rem;
-    --font-size-4xl: 2.25rem;
-    --font-size-5xl: 3rem;
-    
-    /* Espacios */
-    --spacing-xs: 0.5rem;
-    --spacing-sm: 1rem;
-    --spacing-md: 1.5rem;
-    --spacing-lg: 2rem;
-    --spacing-xl: 3rem;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+
+  /* Espacios */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
 }
 
 * {
@@ -45,15 +30,15 @@
 
 body {
   font-family: var(--font-body);
-  color: var(--gray-dark);
+  color: #2B2B2B; /* replaced var(--gray-dark) */
   line-height: 1.6;
-  background-color: var(--white);
+  background-color: #FFFFFF; /* replaced var(--white) */
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 700;
-  color: var(--barca-blue);
+  color: #004D98; /* replaced var(--barca-blue) */
   line-height: 1.2;
 }
 
@@ -72,11 +57,11 @@ h6 { font-size: var(--font-size-lg); }
   align-items: center;
   justify-content: center;
   text-align: center;
-  color:white;
+  color: #FFFFFF; /* replaced white */
 }
 
 .hero-content h1 {
-  color: white;
+  color: #FFFFFF; /* replaced white */
   font-size: 4rem;
   margin-bottom: var(--spacing-md);
   letter-spacing: 3px;
@@ -97,8 +82,9 @@ h6 { font-size: var(--font-size-lg); }
   justify-content: center;
 }
 
+/* Header */
 .header {
-  background: linear-gradient(135deg, var(--barca-blue), var(--barca-blue-dark));
+  background: linear-gradient(135deg, #004D98, #003366); /* replaced barca blues */
   padding: var(--spacing-sm) 0;
   position: sticky;
   top: 0;
@@ -110,15 +96,6 @@ h6 { font-size: var(--font-size-lg); }
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 var(--spacing-md);
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .logo {
@@ -140,7 +117,7 @@ h6 { font-size: var(--font-size-lg); }
 }
 
 .logo h2 {
-  color: var(--white);
+  color: #FFFFFF; /* replaced var(--white) */
   font-size: var(--font-size-xl);
   margin: 0;
   font-weight: 800;
@@ -149,7 +126,7 @@ h6 { font-size: var(--font-size-lg); }
 }
 
 .logo:hover h2 {
-  color: var(--barca-gold);
+  color: #EDBB00; /* replaced var(--barca-gold) */
 }
 
 .nav-menu {
@@ -167,7 +144,7 @@ h6 { font-size: var(--font-size-lg); }
 }
 
 .nav-menu a {
-  color: var(--white);
+  color: #FFFFFF; /* replaced var(--white) */
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -196,14 +173,14 @@ h6 { font-size: var(--font-size-lg); }
 
 .nav-menu a:hover,
 .nav-menu a.active {
-  background-color: var(--barca-red);
+  background-color: #A50044; /* replaced var(--barca-red) */
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(165, 0, 68, 0.3);
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--barca-gold), #D4A100);
-  color: var(--black);
+  background: linear-gradient(135deg, #EDBB00, #D4A100); /* replaced gold */
+  color: #000000; /* replaced black */
   padding: 14px 32px;
   border-radius: 8px;
   text-decoration: none;
@@ -232,16 +209,16 @@ h6 { font-size: var(--font-size-lg); }
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #D4A100, var(--barca-gold));
+  background: linear-gradient(135deg, #D4A100, #EDBB00); /* gold swap */
   transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(237, 187, 0, 0.4);
 }
 
 .btn-secondary {
   background-color: transparent;
-  color: var(--white);
+  color: #FFFFFF; /* replaced var(--white) */
   padding: 14px 32px;
-  border: 2px solid var(--white);
+  border: 2px solid #FFFFFF; /* replaced var(--white) */
   border-radius: 8px;
   text-decoration: none;
   font-weight: 700;
@@ -259,13 +236,13 @@ h6 { font-size: var(--font-size-lg); }
   left: 0;
   width: 0;
   height: 100%;
-  background-color: var(--white);
+  background-color: #FFFFFF; /* replaced var(--white) */
   transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: -1;
 }
 
 .btn-secondary:hover {
-  color: var(--barca-blue);
+  color: #004D98; /* replaced var(--barca-blue) */
   transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
 }
@@ -276,7 +253,7 @@ h6 { font-size: var(--font-size-lg); }
 
 .home-noticias {
   padding: var(--spacing-xl) 0;
-  background-color: var(--white);
+  background-color: #FFFFFF; /* replaced var(--white) */
 }
 
 .section-header {
@@ -287,11 +264,11 @@ h6 { font-size: var(--font-size-lg); }
 }
 
 .section-header h2 {
-  color: var(--barca-blue);
+  color: #004D98; /* replaced var(--barca-blue) */
 }
 
 .link-ver-mas {
-  color: var(--barca-red);
+  color: #A50044; /* replaced var(--barca-red) */
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -306,12 +283,12 @@ h6 { font-size: var(--font-size-lg); }
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: var(--barca-blue);
+  background-color: #004D98; /* replaced var(--barca-blue) */
   transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-ver-mas:hover {
-  color: var(--barca-blue);
+  color: #004D98; /* replaced var(--barca-blue) */
   transform: translateX(5px);
 }
 
@@ -319,14 +296,14 @@ h6 { font-size: var(--font-size-lg); }
   width: 100%;
 }
 
-.noticias-home-grid {
+.noticia-home-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--spacing-lg);
 }
 
 .noticia-home-card {
-  background-color: var(--white);
+  background-color: #FFFFFF; /* replaced var(--white) */
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
@@ -337,27 +314,15 @@ h6 { font-size: var(--font-size-lg); }
 .noticia-home-card:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 12px 40px rgba(0, 77, 152, 0.15);
-  border-color: var(--barca-blue);
-}
-
-.noticia-home-imagen {
-  position: relative;
-  height: 200px;
-  overflow: hidden;
-}
-
-.noticia-home-imagen img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  border-color: #004D98; /* replaced var(--barca-blue) */
 }
 
 .badge-home {
   position: absolute;
   top: 10px;
   left: 10px;
-  background: linear-gradient(135deg, var(--barca-red), var(--barca-red-dark));
-  color: var(--white);
+  background: linear-gradient(135deg, #A50044, #7A0033); /* replaced red gradient */
+  color: #FFFFFF; /* replaced var(--white) */
   padding: 6px 14px;
   border-radius: 20px;
   font-weight: 700;
@@ -377,26 +342,26 @@ h6 { font-size: var(--font-size-lg); }
 
 .fecha-home {
   display: block;
-  color: var(--gray-medium);
+  color: #666666; /* replaced var(--gray-medium) */
   font-size: 0.9rem;
   margin-bottom: var(--spacing-xs);
 }
 
 .noticia-home-info h3 {
-  color: var(--barca-blue);
+  color: #004D98; /* replaced var(--barca-blue) */
   font-size: 1.2rem;
   margin-bottom: var(--spacing-sm);
 }
 
 .noticia-home-info p {
-  color: var(--gray-dark);
+  color: #2B2B2B; /* replaced var(--gray-dark) */
   margin-bottom: var(--spacing-sm);
   line-height: 1.5;
   font-size: 0.95rem;
 }
 
 .link-noticia {
-  color: var(--barca-red);
+  color: #A50044; /* replaced var(--barca-red) */
   text-decoration: none;
   font-weight: 600;
   font-size: 0.9rem;
@@ -412,12 +377,12 @@ h6 { font-size: var(--font-size-lg); }
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: var(--barca-blue);
+  background-color: #004D98; /* replaced var(--barca-blue) */
   transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-noticia:hover {
-  color: var(--barca-blue);
+  color: #004D98; /* replaced var(--barca-blue) */
   transform: translateX(3px);
 }
 
@@ -428,18 +393,18 @@ h6 { font-size: var(--font-size-lg); }
 /* ===== PRÓXIMO PARTIDO ===== */
 .proximo-partido {
   padding: var(--spacing-xl) 0;
-  background-color: var(--barca-blue);
-  color: var(--white);
+  background-color: #004D98; /* replaced var(--barca-blue) */
+  color: #FFFFFF; /* replaced var(--white) */
 }
 
 .proximo-partido h2 {
-  color: var(--white);
+  color: #FFFFFF; /* replaced var(--white) */
   text-align: center;
   margin-bottom: var(--spacing-lg);
 }
 
 .partido-card {
-  background-color: var(--white);
+  background-color: #FFFFFF; /* replaced var(--white) */
   border-radius: 12px;
   padding: var(--spacing-xl);
   max-width: 800px;
@@ -453,8 +418,8 @@ h6 { font-size: var(--font-size-lg); }
 
 .competicion-badge {
   display: inline-block;
-  background-color: var(--barca-gold);
-  color: var(--black);
+  background-color: #EDBB00; /* replaced var(--barca-gold) */
+  color: #000000; /* replaced var(--black) */
   padding: 8px 20px;
   border-radius: 20px;
   font-weight: 700;
@@ -463,7 +428,7 @@ h6 { font-size: var(--font-size-lg); }
 
 .fecha-partido {
   display: block;
-  color: var(--gray-medium);
+  color: #666666; /* replaced var(--gray-medium) */
   margin-top: var(--spacing-xs);
 }
 
@@ -487,7 +452,7 @@ h6 { font-size: var(--font-size-lg); }
   object-fit: contain;
   margin-bottom: var(--spacing-sm);
   border-radius: 50%;
-  background-color: var(--white);
+  background-color: #FFFFFF; /* replaced var(--white) */
   padding: 10px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -499,29 +464,20 @@ h6 { font-size: var(--font-size-lg); }
 }
 
 .equipo h3 {
-  color: var(--barca-blue);
+  color: #004D98; /* replaced var(--barca-blue) */
   font-size: 1.5rem;
 }
 
 .vs {
   font-size: 2rem;
   font-weight: 900;
-  color: var(--barca-red);
-}
-
-.partido-estadio {
-  text-align: center;
-  margin: var(--spacing-lg) 0;
-}
-
-.partido-estadio p {
-  color: var(--gray-medium);
+  color: #A50044; /* replaced var(--barca-red) */
 }
 
 .btn-ver-calendario {
   display: block;
-  background: linear-gradient(135deg, var(--barca-blue), var(--barca-blue-dark));
-  color: var(--white);
+  background: linear-gradient(135deg, #004D98, #003366); /* replaced barca blues */
+  color: #FFFFFF; /* replaced var(--white) */
   text-align: center;
   padding: 14px 24px;
   border-radius: 8px;
@@ -552,7 +508,7 @@ h6 { font-size: var(--font-size-lg); }
 }
 
 .btn-ver-calendario:hover {
-  background: linear-gradient(135deg, var(--barca-red), var(--barca-red-dark));
+  background: linear-gradient(135deg, #A50044, #7A0033); /* replaced red gradient */
   transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(165, 0, 68, 0.4);
 }
@@ -570,7 +526,7 @@ h6 { font-size: var(--font-size-lg); }
 }
 
 .stat-card {
-  background-color: var(--white);
+  background-color: #FFFFFF; /* replaced var(--white) */
   padding: var(--spacing-lg);
   border-radius: 12px;
   text-align: center;
@@ -588,7 +544,7 @@ h6 { font-size: var(--font-size-lg); }
 
 
 .stat-number {
-  color: var(--barca-blue);
+  color: #004D98; /* replaced var(--barca-blue) */
   font-size: 2.5rem;
   font-weight: 900;
   margin-bottom: var(--spacing-xs);
@@ -596,14 +552,14 @@ h6 { font-size: var(--font-size-lg); }
 
 
 .stat-label {
-  color: var(--gray-medium);
+  color: #666666; /* replaced var(--gray-medium) */
   font-size: 1rem;
 }
 
 /* ===== JUGADORES DESTACADOS ===== */
 .jugadores-destacados {
   padding: var(--spacing-xl) 0;
-  background-color: var(--white);
+  background-color: #FFFFFF; /* replaced var(--white) */
 }
 
 .jugadores-grid {
@@ -613,7 +569,7 @@ h6 { font-size: var(--font-size-lg); }
 }
 
 .jugador-card {
-  background-color: var(--white);
+  background-color: #FFFFFF; /* replaced var(--white) */
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
@@ -625,11 +581,11 @@ h6 { font-size: var(--font-size-lg); }
 .jugador-card:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 12px 40px rgba(0, 77, 152, 0.15);
-  border-color: var(--barca-blue);
+  border-color: #004D98; /* replaced var(--barca-blue) */
 }
 
 .jugador-card:hover .jugador-numero {
-  background-color: var(--barca-red);
+  background-color: #A50044; /* replaced var(--barca-red) */
   transform: scale(1.1);
 }
 
@@ -637,7 +593,7 @@ h6 { font-size: var(--font-size-lg); }
   position: relative;
   height: 300px;
   overflow: hidden;
-  background: linear-gradient(135deg, var(--gray-lighter), var(--white));
+  background: linear-gradient(135deg, var(--gray-lighter), #FFFFFF); /* replaced var(--white) */
   border-radius: 12px 12px 0 0;
 }
 
@@ -657,8 +613,8 @@ h6 { font-size: var(--font-size-lg); }
   position: absolute;
   top: 15px;
   right: 15px;
-  background: linear-gradient(135deg, var(--barca-blue), var(--barca-blue-dark));
-  color: var(--white);
+  background: linear-gradient(135deg, #004D98, #003366); /* replaced barca blues */
+  color: #FFFFFF; /* replaced var(--white) */
   width: 55px;
   height: 55px;
   border-radius: 50%;
@@ -669,11 +625,11 @@ h6 { font-size: var(--font-size-lg); }
   font-weight: 900;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 6px 20px rgba(0, 77, 152, 0.4);
-  border: 3px solid var(--white);
+  border: 3px solid #FFFFFF; /* replaced var(--white) */
 }
 
 .jugador-card:hover .jugador-numero {
-  background: linear-gradient(135deg, var(--barca-red), var(--barca-red-dark));
+  background: linear-gradient(135deg, #A50044, #7A0033); /* replaced red gradient */
   transform: scale(1.1);
   box-shadow: 0 8px 25px rgba(165, 0, 68, 0.5);
 }
@@ -684,13 +640,13 @@ h6 { font-size: var(--font-size-lg); }
 }
 
 .jugador-info h3 {
-  color: var(--barca-blue);
+  color: #004D98; /* replaced var(--barca-blue) */
   font-size: 1.1rem;
   margin-bottom: var(--spacing-xs);
 }
 
 .jugador-posicion {
-  color: var(--gray-medium);
+  color: #666666; /* replaced var(--gray-medium) */
   font-size: 0.9rem;
   margin-bottom: var(--spacing-sm);
 }
@@ -704,14 +660,14 @@ h6 { font-size: var(--font-size-lg); }
 
 .jugador-stats span {
   font-size: 0.85rem;
-  color: var(--gray-dark);
+  color: #2B2B2B; /* replaced var(--gray-dark) */
   font-weight: 500;
 }
 
 /* ===== FOOTER ===== */
 .footer {
-  background: linear-gradient(135deg, var(--barca-blue) 0%, var(--barca-blue-dark) 50%, var(--barca-red) 100%);
-  color: var(--white);
+  background: linear-gradient(135deg, #004D98 0%, #003366 50%, #A50044 100%); /* replaced gradient */
+  color: #FFFFFF; /* replaced var(--white) */
   padding: var(--spacing-xl) 0 var(--spacing-md);
 }
 
@@ -727,29 +683,21 @@ h6 { font-size: var(--font-size-lg); }
 
 .footer-section h3,
 .footer-section h4 {
-  color: var(--barca-gold);
+  color: #EDBB00; /* replaced var(--barca-gold) */
   margin-bottom: var(--spacing-sm);
   font-size: 1.2rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .footer-desc {
-  color: var(--gray-light);
+  color: #E5E5E5; /* replaced var(--gray-light) */
   font-size: 0.9rem;
   line-height: 1.6;
   margin-top: var(--spacing-sm);
 }
 
-.footer-section ul {
-  list-style: none;
-}
-
-.footer-section ul li {
-  margin-bottom: var(--spacing-xs);
-}
-
 .footer-section a {
-  color: var(--gray-light);
+  color: #E5E5E5; /* replaced var(--gray-light) */
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   font-size: 0.95rem;
@@ -764,21 +712,16 @@ h6 { font-size: var(--font-size-lg); }
   height: 1px;
   bottom: 0;
   left: 0;
-  background-color: var(--barca-gold);
+  background-color: #EDBB00; /* replaced var(--barca-gold) */
   transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-section a:hover {
-  color: var(--barca-gold);
+  color: #EDBB00; /* replaced var(--barca-gold) */
   transform: translateX(3px);
   text-shadow: 0 0 8px rgba(237, 187, 0, 0.6);
 }
 
-.footer-section a:hover::after {
-  width: 100%;
-}
-
-/* Social Links */
 .social-links {
   display: flex;
   flex-direction: column;
@@ -786,7 +729,7 @@ h6 { font-size: var(--font-size-lg); }
 }
 
 .social-link {
-  color: var(--gray-light);
+  color: #E5E5E5; /* replaced var(--gray-light) */
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   font-size: 0.95rem;
@@ -802,42 +745,26 @@ h6 { font-size: var(--font-size-lg); }
   height: 1px;
   bottom: 0;
   left: 0;
-  background-color: var(--barca-gold);
+  background-color: #EDBB00; /* replaced var(--barca-gold) */
   transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:hover {
-  color: var(--barca-gold);
+  color: #EDBB00; /* replaced var(--barca-gold) */
   transform: translateX(3px);
   text-shadow: 0 0 8px rgba(237, 187, 0, 0.6);
 }
 
-.social-link:hover::after {
-  width: 100%;
-}
-
-.footer-bottom {
-  border-top: 2px solid var(--barca-gold);
-  padding-top: var(--spacing-md);
-  text-align: center;
-  color: var(--white);
-  font-size: 0.9rem;
-  background: rgba(0, 0, 0, 0.2);
-  margin-top: var(--spacing-lg);
-  padding: var(--spacing-md);
-  border-radius: 8px;
-}
-
-/* ===== PÁGINA GALERÍA ===== */
+/* Page hero */
 .page-hero {
-  background: linear-gradient(135deg, var(--barca-blue), var(--barca-red));
+  background: linear-gradient(135deg, #004D98, #A50044); /* replaced blue->red */
   padding: var(--spacing-xl) 0;
   text-align: center;
-  color: var(--white);
+  color: #FFFFFF; /* replaced var(--white) */
 }
 
 .page-hero-content h1 {
-  color: var(--white);
+  color: #FFFFFF; /* replaced white */
   font-size: var(--font-size-4xl);
   margin-bottom: var(--spacing-sm);
   text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
@@ -848,22 +775,10 @@ h6 { font-size: var(--font-size-lg); }
   opacity: 0.9;
 }
 
-.galeria-filtros {
-  padding: var(--spacing-lg) 0;
-  background-color: var(--gray-lighter);
-}
-
-.filtros-buttons {
-  display: flex;
-  justify-content: center;
-  gap: var(--spacing-sm);
-  flex-wrap: wrap;
-}
-
 .filtro-btn {
-  background-color: var(--white);
-  color: var(--barca-blue);
-  border: 2px solid var(--barca-blue);
+  background-color: #FFFFFF; /* replaced var(--white) */
+  color: #004D98; /* replaced var(--barca-blue) */
+  border: 2px solid #004D98; /* replaced var(--barca-blue) */
   padding: 10px 20px;
   border-radius: 25px;
   font-weight: 600;
@@ -876,21 +791,15 @@ h6 { font-size: var(--font-size-lg); }
 
 .filtro-btn:hover,
 .filtro-btn.active {
-  background-color: var(--barca-blue);
-  color: var(--white);
+  background-color: #004D98; /* replaced var(--barca-blue) */
+  color: #FFFFFF; /* replaced var(--white) */
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(0, 77, 152, 0.3);
 }
 
 .galeria-principal {
   padding: var(--spacing-xl) 0;
-  background-color: var(--white);
-}
-
-.galeria-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--spacing-lg);
+  background-color: #FFFFFF; /* replaced var(--white) */
 }
 
 .galeria-item {
@@ -899,29 +808,7 @@ h6 { font-size: var(--font-size-lg); }
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  background-color: var(--white);
-}
-
-.galeria-item:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 40px rgba(0, 77, 152, 0.15);
-}
-
-.galeria-imagen {
-  position: relative;
-  height: 250px;
-  overflow: hidden;
-}
-
-.galeria-imagen img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.galeria-item:hover .galeria-imagen img {
-  transform: scale(1.05);
+  background-color: #FFFFFF; /* replaced var(--white) */
 }
 
 .galeria-overlay {
@@ -948,21 +835,21 @@ h6 { font-size: var(--font-size-lg); }
 }
 
 .galeria-info h3 {
-  color: var(--white);
+  color: #FFFFFF; /* replaced white */
   font-size: 1.3rem;
   margin-bottom: var(--spacing-xs);
   font-weight: 700;
 }
 
 .galeria-info p {
-  color: var(--white);
+  color: #FFFFFF; /* replaced white */
   opacity: 0.9;
   font-size: 0.9rem;
 }
 
 .galeria-ver {
-  background: linear-gradient(135deg, var(--barca-gold), #D4A100);
-  color: var(--black);
+  background: linear-gradient(135deg, #EDBB00, #D4A100); /* replaced gold */
+  color: #000000; /* replaced black */
   border: none;
   padding: 10px 20px;
   border-radius: 6px;
@@ -975,7 +862,7 @@ h6 { font-size: var(--font-size-lg); }
 }
 
 .galeria-ver:hover {
-  background: linear-gradient(135deg, #D4A100, var(--barca-gold));
+  background: linear-gradient(135deg, #D4A100, #EDBB00); /* gold swap */
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(237, 187, 0, 0.4);
 }
@@ -997,15 +884,15 @@ h6 { font-size: var(--font-size-lg); }
   
   body {
     font-family: var(--font-body);
-    color: var(--gray-dark);
+    color: #2B2B2B; /* replaced var(--gray-dark) */
     line-height: 1.6;
-    background-color: var(--white);
+    background-color: #FFFFFF; /* replaced var(--white) */
   }
   
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     font-weight: 700;
-    color: var(--barca-blue);
+    color: #004D98; /* replaced var(--barca-blue) */
     line-height: 1.2;
   }
   
@@ -1025,11 +912,11 @@ h6 { font-size: var(--font-size-lg); }
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: var(--white);
+    color: #FFFFFF; /* replaced white */
   }
   
   .hero-content h1 {
-    color: var(--white);
+    color: #FFFFFF; /* replaced white */
     font-size: 4rem;
     margin-bottom: var(--spacing-md);
     letter-spacing: 3px;
@@ -1051,7 +938,7 @@ h6 { font-size: var(--font-size-lg); }
   }
   
   .header {
-    background: linear-gradient(135deg, var(--barca-blue), var(--barca-blue-dark));
+    background: linear-gradient(135deg, #004D98, #003366); /* replaced barca blues */
     padding: var(--spacing-sm) 0;
     position: sticky;
     top: 0;
@@ -1093,7 +980,7 @@ h6 { font-size: var(--font-size-lg); }
   }
   
   .logo h2 {
-    color: var(--white);
+    color: #FFFFFF; /* replaced var(--white) */
     font-size: var(--font-size-xl);
     margin: 0;
     font-weight: 800;
@@ -1102,7 +989,7 @@ h6 { font-size: var(--font-size-lg); }
   }
   
   .logo:hover h2 {
-    color: var(--barca-gold);
+    color: #EDBB00; /* replaced var(--barca-gold) */
   }
   
   .nav-menu {
@@ -1120,7 +1007,7 @@ h6 { font-size: var(--font-size-lg); }
   }
   
   .nav-menu a {
-    color: var(--white);
+    color: #FFFFFF; /* replaced var(--white) */
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1149,14 +1036,14 @@ h6 { font-size: var(--font-size-lg); }
   
   .nav-menu a:hover,
   .nav-menu a.active {
-    background-color: var(--barca-red);
+    background-color: #A50044; /* replaced var(--barca-red) */
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(165, 0, 68, 0.3);
   }
   
   .btn-primary {
-    background: linear-gradient(135deg, var(--barca-gold), #D4A100);
-    color: var(--black);
+    background: linear-gradient(135deg, #EDBB00, #D4A100); /* replaced gold */
+    color: #000000; /* replaced black */
     padding: 14px 32px;
     border-radius: 8px;
     text-decoration: none;
@@ -1185,16 +1072,16 @@ h6 { font-size: var(--font-size-lg); }
   }
   
   .btn-primary:hover {
-    background: linear-gradient(135deg, #D4A100, var(--barca-gold));
+    background: linear-gradient(135deg, #D4A100, #EDBB00); /* gold swap */
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(237, 187, 0, 0.4);
   }
   
   .btn-secondary {
     background-color: transparent;
-    color: var(--white);
+    color: #FFFFFF; /* replaced var(--white) */
     padding: 14px 32px;
-    border: 2px solid var(--white);
+    border: 2px solid #FFFFFF; /* replaced var(--white) */
     border-radius: 8px;
     text-decoration: none;
     font-weight: 700;
@@ -1212,13 +1099,13 @@ h6 { font-size: var(--font-size-lg); }
     left: 0;
     width: 0;
     height: 100%;
-    background-color: var(--white);
+    background-color: #FFFFFF; /* replaced var(--white) */
     transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: -1;
   }
   
   .btn-secondary:hover {
-    color: var(--barca-blue);
+    color: #004D98; /* replaced var(--barca-blue) */
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
   }
@@ -1230,7 +1117,7 @@ h6 { font-size: var(--font-size-lg); }
   /* ===== NOTICIAS HOME ===== */
   .home-noticias {
     padding: var(--spacing-xl) 0;
-    background-color: var(--white);
+    background-color: #FFFFFF; /* replaced var(--white) */
   }
   
   .section-header {
@@ -1241,11 +1128,11 @@ h6 { font-size: var(--font-size-lg); }
   }
   
   .section-header h2 {
-    color: var(--barca-blue);
+    color: #004D98; /* replaced var(--barca-blue) */
   }
   
   .link-ver-mas {
-    color: var(--barca-red);
+    color: #A50044; /* replaced var(--barca-red) */
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1260,12 +1147,12 @@ h6 { font-size: var(--font-size-lg); }
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: var(--barca-blue);
+    background-color: #004D98; /* replaced var(--barca-blue) */
     transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .link-ver-mas:hover {
-    color: var(--barca-blue);
+    color: #004D98; /* replaced var(--barca-blue) */
     transform: translateX(5px);
   }
   
@@ -1280,7 +1167,7 @@ h6 { font-size: var(--font-size-lg); }
   }
   
   .noticia-home-card {
-    background-color: var(--white);
+    background-color: #FFFFFF; /* replaced var(--white) */
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
@@ -1291,7 +1178,7 @@ h6 { font-size: var(--font-size-lg); }
   .noticia-home-card:hover {
     transform: translateY(-8px) scale(1.02);
     box-shadow: 0 12px 40px rgba(0, 77, 152, 0.15);
-    border-color: var(--barca-blue);
+    border-color: #004D98; /* replaced var(--barca-blue) */
   }
   
   .noticia-home-imagen {
@@ -1310,8 +1197,8 @@ h6 { font-size: var(--font-size-lg); }
     position: absolute;
     top: 10px;
     left: 10px;
-    background: linear-gradient(135deg, var(--barca-red), var(--barca-red-dark));
-    color: var(--white);
+    background: linear-gradient(135deg, #A50044, #7A0033); /* replaced red gradient */
+    color: #FFFFFF; /* replaced var(--white) */
     padding: 6px 14px;
     border-radius: 20px;
     font-weight: 700;
@@ -1331,26 +1218,26 @@ h6 { font-size: var(--font-size-lg); }
   
   .fecha-home {
     display: block;
-    color: var(--gray-medium);
+    color: #666666; /* replaced var(--gray-medium) */
     font-size: 0.9rem;
     margin-bottom: var(--spacing-xs);
   }
   
   .noticia-home-info h3 {
-    color: var(--barca-blue);
+    color: #004D98; /* replaced var(--barca-blue) */
     font-size: 1.2rem;
     margin-bottom: var(--spacing-sm);
   }
   
   .noticia-home-info p {
-    color: var(--gray-dark);
+    color: #2B2B2B; /* replaced var(--gray-dark) */
     margin-bottom: var(--spacing-sm);
     line-height: 1.5;
     font-size: 0.95rem;
   }
   
   .link-noticia {
-    color: var(--barca-red);
+    color: #A50044; /* replaced var(--barca-red) */
     text-decoration: none;
     font-weight: 600;
     font-size: 0.9rem;
@@ -1366,12 +1253,12 @@ h6 { font-size: var(--font-size-lg); }
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: var(--barca-blue);
+    background-color: #004D98; /* replaced var(--barca-blue) */
     transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .link-noticia:hover {
-    color: var(--barca-blue);
+    color: #004D98; /* replaced var(--barca-blue) */
     transform: translateX(3px);
   }
   
@@ -1382,18 +1269,18 @@ h6 { font-size: var(--font-size-lg); }
   /* ===== PRÓXIMO PARTIDO ===== */
   .proximo-partido {
     padding: var(--spacing-xl) 0;
-    background-color: var(--barca-blue);
-    color: var(--white);
+    background-color: #004D98; /* replaced var(--barca-blue) */
+    color: #FFFFFF; /* replaced var(--white) */
   }
   
   .proximo-partido h2 {
-    color: var(--white);
+    color: #FFFFFF; /* replaced var(--white) */
     text-align: center;
     margin-bottom: var(--spacing-lg);
   }
   
   .partido-card {
-    background-color: var(--white);
+    background-color: #FFFFFF; /* replaced var(--white) */
     border-radius: 12px;
     padding: var(--spacing-xl);
     max-width: 800px;
@@ -1407,8 +1294,8 @@ h6 { font-size: var(--font-size-lg); }
   
   .competicion-badge {
     display: inline-block;
-    background-color: var(--barca-gold);
-    color: var(--black);
+    background-color: #EDBB00; /* replaced var(--barca-gold) */
+    color: #000000; /* replaced var(--black) */
     padding: 8px 20px;
     border-radius: 20px;
     font-weight: 700;
@@ -1417,7 +1304,7 @@ h6 { font-size: var(--font-size-lg); }
   
   .fecha-partido {
     display: block;
-    color: var(--gray-medium);
+    color: #666666; /* replaced var(--gray-medium) */
     margin-top: var(--spacing-xs);
   }
   
@@ -1441,7 +1328,7 @@ h6 { font-size: var(--font-size-lg); }
     object-fit: contain;
     margin-bottom: var(--spacing-sm);
     border-radius: 50%;
-    background-color: var(--white);
+    background-color: #FFFFFF; /* replaced var(--white) */
     padding: 10px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1453,29 +1340,20 @@ h6 { font-size: var(--font-size-lg); }
   }
   
   .equipo h3 {
-    color: var(--barca-blue);
+    color: #004D98; /* replaced var(--barca-blue) */
     font-size: 1.5rem;
   }
   
   .vs {
     font-size: 2rem;
     font-weight: 900;
-    color: var(--barca-red);
-  }
-  
-  .partido-estadio {
-    text-align: center;
-    margin: var(--spacing-lg) 0;
-  }
-  
-  .partido-estadio p {
-    color: var(--gray-medium);
+    color: #A50044; /* replaced var(--barca-red) */
   }
   
   .btn-ver-calendario {
     display: block;
-    background: linear-gradient(135deg, var(--barca-blue), var(--barca-blue-dark));
-    color: var(--white);
+    background: linear-gradient(135deg, #004D98, #003366); /* replaced barca blues */
+    color: #FFFFFF; /* replaced var(--white) */
     text-align: center;
     padding: 14px 24px;
     border-radius: 8px;
@@ -1506,7 +1384,7 @@ h6 { font-size: var(--font-size-lg); }
   }
   
   .btn-ver-calendario:hover {
-    background: linear-gradient(135deg, var(--barca-red), var(--barca-red-dark));
+    background: linear-gradient(135deg, #A50044, #7A0033); /* replaced red gradient */
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(165, 0, 68, 0.4);
   }
@@ -1524,7 +1402,7 @@ h6 { font-size: var(--font-size-lg); }
   }
   
   .stat-card {
-    background-color: var(--white);
+    background-color: #FFFFFF; /* replaced var(--white) */
     padding: var(--spacing-lg);
     border-radius: 12px;
     text-align: center;
@@ -1542,7 +1420,7 @@ h6 { font-size: var(--font-size-lg); }
   
   
   .stat-number {
-    color: var(--barca-blue);
+    color: #004D98; /* replaced var(--barca-blue) */
     font-size: 2.5rem;
     font-weight: 900;
     margin-bottom: var(--spacing-xs);
@@ -1550,14 +1428,14 @@ h6 { font-size: var(--font-size-lg); }
   
   
   .stat-label {
-    color: var(--gray-medium);
+    color: #666666; /* replaced var(--gray-medium) */
     font-size: 1rem;
   }
   
   /* ===== JUGADORES DESTACADOS ===== */
   .jugadores-destacados {
     padding: var(--spacing-xl) 0;
-    background-color: var(--white);
+    background-color: #FFFFFF; /* replaced var(--white) */
   }
   
   .jugadores-grid {
@@ -1567,7 +1445,7 @@ h6 { font-size: var(--font-size-lg); }
   }
   
   .jugador-card {
-    background-color: var(--white);
+    background-color: #FFFFFF; /* replaced var(--white) */
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
@@ -1579,11 +1457,11 @@ h6 { font-size: var(--font-size-lg); }
   .jugador-card:hover {
     transform: translateY(-8px) scale(1.02);
     box-shadow: 0 12px 40px rgba(0, 77, 152, 0.15);
-    border-color: var(--barca-blue);
+    border-color: #004D98; /* replaced var(--barca-blue) */
   }
   
   .jugador-card:hover .jugador-numero {
-    background-color: var(--barca-red);
+    background-color: #A50044; /* replaced var(--barca-red) */
     transform: scale(1.1);
   }
   
@@ -1591,7 +1469,7 @@ h6 { font-size: var(--font-size-lg); }
     position: relative;
     height: 300px;
     overflow: hidden;
-    background: linear-gradient(135deg, var(--gray-lighter), var(--white));
+    background: linear-gradient(135deg, var(--gray-lighter), #FFFFFF); /* replaced var(--white) */
     border-radius: 12px 12px 0 0;
   }
   
@@ -1611,8 +1489,8 @@ h6 { font-size: var(--font-size-lg); }
     position: absolute;
     top: 15px;
     right: 15px;
-    background: linear-gradient(135deg, var(--barca-blue), var(--barca-blue-dark));
-    color: var(--white);
+    background: linear-gradient(135deg, #004D98, #003366); /* replaced barca blues */
+    color: #FFFFFF; /* replaced var(--white) */
     width: 55px;
     height: 55px;
     border-radius: 50%;
@@ -1623,11 +1501,11 @@ h6 { font-size: var(--font-size-lg); }
     font-weight: 900;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 6px 20px rgba(0, 77, 152, 0.4);
-    border: 3px solid var(--white);
+    border: 3px solid #FFFFFF; /* replaced var(--white) */
   }
   
   .jugador-card:hover .jugador-numero {
-    background: linear-gradient(135deg, var(--barca-red), var(--barca-red-dark));
+    background: linear-gradient(135deg, #A50044, #7A0033); /* replaced red gradient */
     transform: scale(1.1);
     box-shadow: 0 8px 25px rgba(165, 0, 68, 0.5);
   }
@@ -1638,13 +1516,13 @@ h6 { font-size: var(--font-size-lg); }
   }
   
   .jugador-info h3 {
-    color: var(--barca-blue);
+    color: #004D98; /* replaced var(--barca-blue) */
     font-size: 1.1rem;
     margin-bottom: var(--spacing-xs);
   }
   
   .jugador-posicion {
-    color: var(--gray-medium);
+    color: #666666; /* replaced var(--gray-medium) */
     font-size: 0.9rem;
     margin-bottom: var(--spacing-sm);
   }
@@ -1658,51 +1536,44 @@ h6 { font-size: var(--font-size-lg); }
   
   .jugador-stats span {
     font-size: 0.85rem;
-    color: var(--gray-dark);
+    color: #2B2B2B; /* replaced var(--gray-dark) */
     font-weight: 500;
   }
   
   /* ===== FOOTER ===== */
   .footer {
-    background-color: var(--gray-dark);
-    color: var(--white);
+    background: linear-gradient(135deg, #004D98 0%, #003366 50%, #A50044 100%); /* replaced gradient */
+    color: #FFFFFF; /* replaced var(--white) */
     padding: var(--spacing-xl) 0 var(--spacing-md);
   }
   
   .footer-content {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: var(--spacing-xl);
     margin-bottom: var(--spacing-lg);
-    max-width: 1000px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
   }
   
   .footer-section h3,
   .footer-section h4 {
-    color: var(--barca-gold);
+    color: #EDBB00; /* replaced var(--barca-gold) */
     margin-bottom: var(--spacing-sm);
     font-size: 1.2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
   
   .footer-desc {
-    color: var(--gray-light);
+    color: #E5E5E5; /* replaced var(--gray-light) */
     font-size: 0.9rem;
     line-height: 1.6;
     margin-top: var(--spacing-sm);
   }
   
-  .footer-section ul {
-    list-style: none;
-  }
-  
-  .footer-section ul li {
-    margin-bottom: var(--spacing-xs);
-  }
-  
   .footer-section a {
-    color: var(--gray-light);
+    color: #E5E5E5; /* replaced var(--gray-light) */
     text-decoration: none;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     font-size: 0.95rem;
@@ -1717,38 +1588,80 @@ h6 { font-size: var(--font-size-lg); }
     height: 1px;
     bottom: 0;
     left: 0;
-    background-color: var(--barca-gold);
+    background-color: #EDBB00; /* replaced var(--barca-gold) */
     transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .footer-section a:hover {
-    color: var(--barca-gold);
+    color: #EDBB00; /* replaced var(--barca-gold) */
     transform: translateX(3px);
+    text-shadow: 0 0 8px rgba(237, 187, 0, 0.6);
   }
-  
+
   .footer-section a:hover::after {
     width: 100%;
   }
-  
-  
+
+  /* Social Links */
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+
+  .social-link {
+    color: #E5E5E5; /* replaced var(--gray-light) */
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 0.95rem;
+    position: relative;
+    padding: 4px 0;
+    display: inline-block;
+  }
+
+  .social-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #EDBB00; /* replaced var(--barca-gold) */
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .social-link:hover {
+    color: #EDBB00; /* replaced var(--barca-gold) */
+    transform: translateX(3px);
+    text-shadow: 0 0 8px rgba(237, 187, 0, 0.6);
+  }
+
+  .social-link:hover::after {
+    width: 100%;
+  }
+
   .footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 2px solid #EDBB00; /* replaced var(--barca-gold) */
     padding-top: var(--spacing-md);
     text-align: center;
-    color: var(--gray-light);
+    color: #FFFFFF; /* replaced var(--white) */
     font-size: 0.9rem;
+    background: rgba(0, 0, 0, 0.2);
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-md);
+    border-radius: 8px;
   }
   
   /* ===== PÁGINA GALERÍA ===== */
   .page-hero {
-    background: linear-gradient(135deg, var(--barca-blue), var(--barca-red));
+    background: linear-gradient(135deg, #004D98, #A50044); /* replaced blue->red */
     padding: var(--spacing-xl) 0;
     text-align: center;
-    color: var(--white);
+    color: #FFFFFF; /* replaced var(--white) */
   }
   
   .page-hero-content h1 {
-    color: var(--white);
+    color: #FFFFFF; /* replaced white */
     font-size: var(--font-size-4xl);
     margin-bottom: var(--spacing-sm);
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
@@ -1772,9 +1685,9 @@ h6 { font-size: var(--font-size-lg); }
   }
   
   .filtro-btn {
-    background-color: var(--white);
-    color: var(--barca-blue);
-    border: 2px solid var(--barca-blue);
+    background-color: #FFFFFF; /* replaced var(--white) */
+    color: #004D98; /* replaced var(--barca-blue) */
+    border: 2px solid #004D98; /* replaced var(--barca-blue) */
     padding: 10px 20px;
     border-radius: 25px;
     font-weight: 600;
@@ -1787,21 +1700,15 @@ h6 { font-size: var(--font-size-lg); }
   
   .filtro-btn:hover,
   .filtro-btn.active {
-    background-color: var(--barca-blue);
-    color: var(--white);
+    background-color: #004D98; /* replaced var(--barca-blue) */
+    color: #FFFFFF; /* replaced var(--white) */
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(0, 77, 152, 0.3);
   }
   
   .galeria-principal {
     padding: var(--spacing-xl) 0;
-    background-color: var(--white);
-  }
-  
-  .galeria-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-lg);
+    background-color: #FFFFFF; /* replaced var(--white) */
   }
   
   .galeria-item {
@@ -1810,29 +1717,7 @@ h6 { font-size: var(--font-size-lg); }
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    background-color: var(--white);
-  }
-  
-  .galeria-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 40px rgba(0, 77, 152, 0.15);
-  }
-  
-  .galeria-imagen {
-    position: relative;
-    height: 250px;
-    overflow: hidden;
-  }
-  
-  .galeria-imagen img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  
-  .galeria-item:hover .galeria-imagen img {
-    transform: scale(1.05);
+    background-color: #FFFFFF; /* replaced var(--white) */
   }
   
   .galeria-overlay {
@@ -1859,21 +1744,21 @@ h6 { font-size: var(--font-size-lg); }
   }
   
   .galeria-info h3 {
-    color: var(--white);
+    color: #FFFFFF; /* replaced white */
     font-size: 1.3rem;
     margin-bottom: var(--spacing-xs);
     font-weight: 700;
   }
   
   .galeria-info p {
-    color: var(--white);
+    color: #FFFFFF; /* replaced white */
     opacity: 0.9;
     font-size: 0.9rem;
   }
   
   .galeria-ver {
-    background: linear-gradient(135deg, var(--barca-gold), #D4A100);
-    color: var(--black);
+    background: linear-gradient(135deg, #EDBB00, #D4A100); /* replaced gold */
+    color: #000000; /* replaced black */
     border: none;
     padding: 10px 20px;
     border-radius: 6px;
@@ -1886,7 +1771,7 @@ h6 { font-size: var(--font-size-lg); }
   }
   
   .galeria-ver:hover {
-    background: linear-gradient(135deg, #D4A100, var(--barca-gold));
+    background: linear-gradient(135deg, #D4A100, #EDBB00); /* gold swap */
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(237, 187, 0, 0.4);
   }
