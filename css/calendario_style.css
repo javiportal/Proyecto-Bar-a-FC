@@ -318,42 +318,6 @@
     box-shadow: 0 6px 20px rgba(165, 0, 68, 0.3);
   }
 
-  .btn-recordar {
-    background-color: transparent;
-    color: var(--barca-blue);
-    border: 2px solid var(--barca-blue);
-    padding: 10px 16px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: var(--font-size-sm);
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .btn-recordar::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background-color: var(--barca-blue);
-    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: -1;
-  }
-
-  .btn-recordar:hover {
-    color: var(--white);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(0, 77, 152, 0.3);
-  }
-
-  .btn-recordar:hover::before {
-    width: 100%;
-  }
-
   /* Responsive para calendario */
   @media (max-width: 768px) {
     .filtros-buttons {
