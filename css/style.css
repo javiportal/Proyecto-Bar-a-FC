@@ -1,5 +1,5 @@
 :root {
-    /* Colores principales */
+    /* Main Colors */
     --barca-blue: #004D98;
     --barca-blue-dark: #003366;
     --barca-red: #A50044;
@@ -17,8 +17,8 @@
     /* Tipografía */
     --font-heading: 'Poppins', sans-serif;
     --font-body: 'Roboto', sans-serif;
-    
-    /* Tamaños */
+
+    /* Font Sizes */
     --font-size-xs: 0.75rem;
     --font-size-sm: 0.875rem;
     --font-size-base: 1rem;
@@ -29,7 +29,7 @@
     --font-size-4xl: 2.25rem;
     --font-size-5xl: 3rem;
     
-    /* Espaciado */
+    /* Espacios */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
     --spacing-md: 1.5rem;
@@ -732,10 +732,10 @@ h6 { font-size: var(--font-size-lg); }
 
 .footer-content {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--spacing-xl);
   margin-bottom: var(--spacing-lg);
-  max-width: 1000px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -791,6 +791,42 @@ h6 { font-size: var(--font-size-lg); }
   width: 100%;
 }
 
+/* Social Links */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.social-link {
+  color: var(--gray-light);
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 0.95rem;
+  position: relative;
+  padding: 4px 0;
+  display: inline-block;
+}
+
+.social-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--barca-gold);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-link:hover {
+  color: var(--barca-gold);
+  transform: translateX(3px);
+}
+
+.social-link:hover::after {
+  width: 100%;
+}
 
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.1);
@@ -2056,6 +2092,13 @@ h6 { font-size: var(--font-size-lg); }
     }
   }
   
+  @media (max-width: 992px) {
+    .footer-content {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-lg);
+    }
+  }
+
   @media (max-width: 768px) {
     .hero-content h1 {
       font-size: 2rem;
@@ -2100,6 +2143,13 @@ h6 { font-size: var(--font-size-lg); }
       grid-template-columns: 1fr;
       gap: var(--spacing-lg);
       text-align: center;
+    }
+    
+    .social-links {
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: var(--spacing-sm);
     }
     
     .galeria-grid {
