@@ -1,21 +1,8 @@
 /* historia.css - usar esto para el html*/
 
-/* Tipografía y base */
+/* Fondo general rojo para esta página */
 body {
   background-color: #A50044; /* barca-red */
-  font-family: 'Roboto', sans-serif; /* font-body */
-  font-size: 16px; /* --font-size-base */
-  line-height: 1.6;
-  color: #ffffff;
-}
-
-/* Headings usan Poppins */
-h1, h2, h3, h4 {
-  font-family: 'Poppins', sans-serif; /* font-heading */
-  font-weight: 600;
-  color: #FFFFFF; /* blanco para buen contraste */
-  text-transform: uppercase;
-  margin-top: 0;
 }
 
 /* HERO */
@@ -24,53 +11,50 @@ h1, h2, h3, h4 {
   background-color: transparent; /* deja ver el fondo rojo */
   color: #FFFFFF;
 }
-.historia-hero .container {
-  max-width: 1100px;
-  margin: 0 auto;
+
+.timeline-header p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
 }
 .historia-hero h1 {
   margin: 0 0 8px;
-  font-size: 48px; /* --font-size-5xl ≈ 48px */
+  font-size: 34px; /* aumentado para títulos principales */
   color: #FFFFFF;
 }
 .historia-hero .lead {
   margin: 0;
-  font-size: 16px; /* --font-size-base */
+  font-size: 16px;
   color: #F5F5F5; /* gray-lighter */
 }
 
 /* Secciones: cajas azules */
 .historia-section.container {
   max-width: 1100px;
-  margin: 24px auto; /* spacing-md ≈ 24px */
-  padding: 24px; /* spacing-md */
+  margin: 16px auto;
+  padding: 16px;
   background-color: #004D98; /* barca-blue */
   color: #FFFFFF; /* texto claro sobre azul */
   border-radius: 8px;
   border: none;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.20);
-  transition: box-shadow 180ms ease, transform 180ms ease;
-}
-.historia-section.container:hover {
-  box-shadow: 0 14px 30px rgba(0,0,0,0.28); /* sombra más pronunciada al pasar */
 }
 .historia-section h2 {
-  font-size: 36px; /* --font-size-4xl ≈ 36px */
-  margin: 0 0 12px;
+  font-size: 26px; /* aumentado */
+  margin: 0 0 10px;
   color: #FFFFFF;
 }
 .historia-section h3 {
-  font-size: 30px; /* --font-size-3xl ≈ 30px */
-  margin: 16px 0 10px;
+  font-size: 20px; /* aumentado */
+  margin: 16px 0 8px;
   color: #FFFFFF;
 }
 .historia-section h4 {
-  font-size: 24px; /* --font-size-2xl ≈ 24px */
+  font-size: 18px; /* ligeramente mayor */
   margin-top: 12px;
   color: #FFFFFF;
 }
 .historia-section p {
-  font-size: 16px; /* base */
   line-height: 1.6;
   margin: 8px 0 0;
 }
@@ -78,7 +62,7 @@ h1, h2, h3, h4 {
 /* Centramos el bloque de bulletpoints dentro de .highlights */
 .highlights {
   text-align: center; /* centro el contenedor */
-  margin-top: 12px; /* spacing-sm */
+  margin-top: 8px;
 }
 .highlights ul {
   display: inline-block; /* para centrar el bloque */
@@ -90,89 +74,18 @@ h1, h2, h3, h4 {
 .highlights li {
   margin: 6px 0;
   color: #FFFFFF; /* asegurar contraste en cajas azules */
-  font-size: 16px;
-}
-
-/* Centrar el bloque de datos actuales (current-stats) */
-.current-stats {
-  text-align: center;
-  margin-top: 12px;
-}
-.current-stats ul {
-  display: inline-block;
-  text-align: left;
-  padding-left: 18px;
-  margin: 8px 0 0;
-  max-width: 720px;
-}
-.current-stats li {
-  margin: 6px 0;
-  color: #FFFFFF;
-  font-size: 16px;
-}
-
-/* Caja interior para listas (caja dentro de caja) */
-.inner-box {
-  background-color: #A50044; /* caja roja (barca) dentro de la caja azul */
-  color: #FFFFFF; /* texto claro dentro de la caja roja */
-  padding: 12px; /* spacing */
-  border-radius: 6px;
-  max-width: 600px; /* menos ancho para que no sea tan larga */
-  margin: 8px auto 0; /* centrado */
-  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
-}
-.inner-box ul {
-  margin: 0;
-  padding-left: 18px;
-}
-.inner-box li {
-  margin: 6px 0;
-  color: #FFFFFF;
-  font-size: 16px;
-}
-
-/* Contenedor para la galería histórica */
-.gallery-box {
-  background-color: #004D98; /* usar mismo azul de las otras cajas */
-  color: #FFFFFF; /* texto claro */
-  padding: 16px;
-  border-radius: 8px;
-  max-width: 1120px;
-  margin: 12px auto 0;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.16);
-  transition: box-shadow 180ms ease, transform 180ms ease;
-}
-.gallery-box:hover {
-  box-shadow: 0 20px 48px rgba(0,0,0,0.28);
-  transform: translateY(-4px);
-}
-.gallery-box h2 {
-  color: #FFFFFF; /* título blanco dentro de caja azul */
-  margin: 0 0 12px;
-}
-.gallery-box .gallery-grid {
-  gap: 12px;
-}
-/* Imágenes dentro de la gallery-box: sombra base y hover más marcado */
-.gallery-box .gallery-grid img {
-  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
-  transition: transform 180ms ease, box-shadow 180ms ease;
-}
-.gallery-box .gallery-grid img:hover {
-  transform: scale(1.04);
-  box-shadow: 0 24px 48px rgba(0,0,0,0.32);
 }
 
 /* Timeline */
 .timeline {
   margin-top: 12px;
 }
-.timeline ul {
-  padding-left: 18px;
-  margin: 0;
-}
-.timeline li {
-  margin: 6px 0;
+
+.trophy-info h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 10px;
 }
 
 /* Imágenes principales de cada sección */
@@ -181,18 +94,17 @@ h1, h2, h3, h4 {
   height: auto;
   display: block;
   border-radius: 8px;
-  margin: 12px 0 24px; /* spacing-sm por spacing-md */
+  margin: 10px 0 16px;
 }
 
 /* Galerías: menos columnas para que se vean más grandes */
 .historia-images h4 {
   margin: 12px 0 8px;
   color: #FFFFFF;
-  font-size: 24px;
 }
 .gallery-grid {
   display: grid;
-  gap: 16px; /* spacing-sm */
+  gap: 12px;
   grid-template-columns: repeat(2, 1fr); /* antes 3 -> ahora 2 para hacerlas más grandes */
 }
 .gallery-grid img {
@@ -200,12 +112,6 @@ h1, h2, h3, h4 {
   height: auto;
   display: block;
   border-radius: 6px;
-  transition: transform 150ms ease, box-shadow 150ms ease; /* transición sencilla */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.10);
-}
-.gallery-grid img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 18px 36px rgba(0,0,0,0.28);
 }
 
 /* Galería histórica con 3 columnas y miniaturas más altas */
@@ -213,13 +119,8 @@ h1, h2, h3, h4 {
   grid-template-columns: repeat(3, 1fr);
 }
 #galeria-historia .gallery-grid img {
-  height: 220px; /* miniaturas */
+  height: 220px; /* antes 180px */
   object-fit: cover;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.10);
-}
-#galeria-historia .gallery-grid img:hover {
-  transform: scale(1.02);
-  box-shadow: 0 14px 28px rgba(0,0,0,0.24);
 }
 
 /* Trofeos */
@@ -227,27 +128,18 @@ h1, h2, h3, h4 {
   display: flex;
   align-items: center;
   justify-content: center; /* centra horizontalmente las tarjetas */
-  gap: 16px;
+  gap: 12px;
   flex-wrap: wrap;
   margin-top: 12px;
-  max-width: 900px; /* opcional: limitar ancho para mantener tarjetas juntas */
-  margin-left: auto;
-  margin-right: auto;
 }
 .trophy {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 12px 16px; /* spacing-sm/md */
+  padding: 8px 12px;
   border: 1px solid #E5E5E5; /* gray-light */
   border-radius: 8px;
   background-color: #FFFFFF; /* blanco para contraste con caja azul */
-  box-shadow: 0 6px 14px rgba(0,0,0,0.12); /* sombra base */
-  transition: box-shadow 160ms ease, transform 160ms ease;
-}
-.trophy:hover {
-  box-shadow: 0 18px 36px rgba(0,0,0,0.26); /* sombra fuerte en hover */
-  transform: translateY(-4px);
 }
 .trophy img {
   width: 56px;
@@ -258,12 +150,10 @@ h1, h2, h3, h4 {
 .trophy-meta strong {
   color: #003366; /* barca-blue-dark */
   display: block;
-  font-size: 16px;
 }
 .trophy-meta .count {
   color: #A50044; /* barca-red */
   font-weight: 700;
-  font-size: 18px;
 }
 
 /* Footer margen superior en esta página */
@@ -289,7 +179,6 @@ footer.footer {
     grid-template-columns: 1fr;
   }
   .historia-hero h1 {
-    font-size: 34px;
+    font-size: 22px;
   }
 }
-
