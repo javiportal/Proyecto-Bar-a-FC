@@ -1,8 +1,21 @@
 /* historia.css - usar esto para el html*/
 
-/* Fondo general rojo para esta página */
+/* Tipografía y base */
 body {
   background-color: #A50044; /* barca-red */
+  font-family: 'Roboto', sans-serif; /* font-body */
+  font-size: 16px; /* --font-size-base */
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+/* Headings usan Poppins */
+h1, h2, h3, h4 {
+  font-family: 'Poppins', sans-serif; /* font-heading */
+  font-weight: 600;
+  color: #FFFFFF; /* blanco para buen contraste */
+  text-transform: uppercase;
+  margin-top: 0;
 }
 
 /* HERO */
@@ -17,41 +30,47 @@ body {
 }
 .historia-hero h1 {
   margin: 0 0 8px;
-  font-size: 34px; /* aumentado para títulos principales */
+  font-size: 48px; /* --font-size-5xl ≈ 48px */
   color: #FFFFFF;
 }
 .historia-hero .lead {
   margin: 0;
-  font-size: 16px;
+  font-size: 16px; /* --font-size-base */
   color: #F5F5F5; /* gray-lighter */
 }
 
 /* Secciones: cajas azules */
 .historia-section.container {
   max-width: 1100px;
-  margin: 16px auto;
-  padding: 16px;
+  margin: 24px auto; /* spacing-md ≈ 24px */
+  padding: 24px; /* spacing-md */
   background-color: #004D98; /* barca-blue */
   color: #FFFFFF; /* texto claro sobre azul */
   border-radius: 8px;
   border: none;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.20);
+  transition: box-shadow 180ms ease, transform 180ms ease;
+}
+.historia-section.container:hover {
+  box-shadow: 0 14px 30px rgba(0,0,0,0.28); /* sombra más pronunciada al pasar */
 }
 .historia-section h2 {
-  font-size: 26px; /* aumentado */
-  margin: 0 0 10px;
+  font-size: 36px; /* --font-size-4xl ≈ 36px */
+  margin: 0 0 12px;
   color: #FFFFFF;
 }
 .historia-section h3 {
-  font-size: 20px; /* aumentado */
-  margin: 16px 0 8px;
+  font-size: 30px; /* --font-size-3xl ≈ 30px */
+  margin: 16px 0 10px;
   color: #FFFFFF;
 }
 .historia-section h4 {
-  font-size: 18px; /* ligeramente mayor */
+  font-size: 24px; /* --font-size-2xl ≈ 24px */
   margin-top: 12px;
   color: #FFFFFF;
 }
 .historia-section p {
+  font-size: 16px; /* base */
   line-height: 1.6;
   margin: 8px 0 0;
 }
@@ -59,7 +78,7 @@ body {
 /* Centramos el bloque de bulletpoints dentro de .highlights */
 .highlights {
   text-align: center; /* centro el contenedor */
-  margin-top: 8px;
+  margin-top: 12px; /* spacing-sm */
 }
 .highlights ul {
   display: inline-block; /* para centrar el bloque */
@@ -71,6 +90,7 @@ body {
 .highlights li {
   margin: 6px 0;
   color: #FFFFFF; /* asegurar contraste en cajas azules */
+  font-size: 16px;
 }
 
 /* Timeline */
@@ -91,17 +111,18 @@ body {
   height: auto;
   display: block;
   border-radius: 8px;
-  margin: 10px 0 16px;
+  margin: 12px 0 24px; /* spacing-sm por spacing-md */
 }
 
 /* Galerías: menos columnas para que se vean más grandes */
 .historia-images h4 {
   margin: 12px 0 8px;
   color: #FFFFFF;
+  font-size: 24px;
 }
 .gallery-grid {
   display: grid;
-  gap: 12px;
+  gap: 16px; /* spacing-sm */
   grid-template-columns: repeat(2, 1fr); /* antes 3 -> ahora 2 para hacerlas más grandes */
 }
 .gallery-grid img {
@@ -109,6 +130,12 @@ body {
   height: auto;
   display: block;
   border-radius: 6px;
+  transition: transform 150ms ease, box-shadow 150ms ease; /* transición sencilla */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.10);
+}
+.gallery-grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 18px 36px rgba(0,0,0,0.28);
 }
 
 /* Galería histórica con 3 columnas y miniaturas más altas */
@@ -116,8 +143,13 @@ body {
   grid-template-columns: repeat(3, 1fr);
 }
 #galeria-historia .gallery-grid img {
-  height: 220px; /* antes 180px */
+  height: 220px; /* miniaturas */
   object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.10);
+}
+#galeria-historia .gallery-grid img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.24);
 }
 
 /* Trofeos */
@@ -125,18 +157,27 @@ body {
   display: flex;
   align-items: center;
   justify-content: center; /* centra horizontalmente las tarjetas */
-  gap: 12px;
+  gap: 16px;
   flex-wrap: wrap;
   margin-top: 12px;
+  max-width: 900px; /* opcional: limitar ancho para mantener tarjetas juntas */
+  margin-left: auto;
+  margin-right: auto;
 }
 .trophy {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 8px 12px;
+  padding: 12px 16px; /* spacing-sm/md */
   border: 1px solid #E5E5E5; /* gray-light */
   border-radius: 8px;
   background-color: #FFFFFF; /* blanco para contraste con caja azul */
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12); /* sombra base */
+  transition: box-shadow 160ms ease, transform 160ms ease;
+}
+.trophy:hover {
+  box-shadow: 0 18px 36px rgba(0,0,0,0.26); /* sombra fuerte en hover */
+  transform: translateY(-4px);
 }
 .trophy img {
   width: 56px;
@@ -147,10 +188,12 @@ body {
 .trophy-meta strong {
   color: #003366; /* barca-blue-dark */
   display: block;
+  font-size: 16px;
 }
 .trophy-meta .count {
   color: #A50044; /* barca-red */
   font-weight: 700;
+  font-size: 18px;
 }
 
 /* Footer margen superior en esta página */
@@ -176,7 +219,7 @@ footer.footer {
     grid-template-columns: 1fr;
   }
   .historia-hero h1 {
-    font-size: 22px;
+    font-size: 34px;
   }
 }
 
