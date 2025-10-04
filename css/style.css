@@ -725,7 +725,7 @@ h6 { font-size: var(--font-size-lg); }
 
 /* ===== FOOTER ===== */
 .footer {
-  background-color: var(--gray-dark);
+  background: linear-gradient(135deg, var(--barca-blue) 0%, var(--barca-blue-dark) 50%, var(--barca-red) 100%);
   color: var(--white);
   padding: var(--spacing-xl) 0 var(--spacing-md);
 }
@@ -745,6 +745,7 @@ h6 { font-size: var(--font-size-lg); }
   color: var(--barca-gold);
   margin-bottom: var(--spacing-sm);
   font-size: 1.2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .footer-desc {
@@ -785,6 +786,7 @@ h6 { font-size: var(--font-size-lg); }
 .footer-section a:hover {
   color: var(--barca-gold);
   transform: translateX(3px);
+  text-shadow: 0 0 8px rgba(237, 187, 0, 0.6);
 }
 
 .footer-section a:hover::after {
@@ -822,6 +824,7 @@ h6 { font-size: var(--font-size-lg); }
 .social-link:hover {
   color: var(--barca-gold);
   transform: translateX(3px);
+  text-shadow: 0 0 8px rgba(237, 187, 0, 0.6);
 }
 
 .social-link:hover::after {
@@ -829,11 +832,15 @@ h6 { font-size: var(--font-size-lg); }
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 2px solid var(--barca-gold);
   padding-top: var(--spacing-md);
   text-align: center;
-  color: var(--gray-light);
+  color: var(--white);
   font-size: 0.9rem;
+  background: rgba(0, 0, 0, 0.2);
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-md);
+  border-radius: 8px;
 }
 
 /* ===== PÁGINA GALERÍA ===== */
