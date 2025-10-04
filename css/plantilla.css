@@ -30,7 +30,7 @@
   font-style: italic;
 }
 
-/* ===== CARDS DE JUGADORES SIN IMÁGENES ===== */
+
 .jugadores-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -162,9 +162,6 @@
 
 
 
-.plantilla-section {
-  animation: fadeInUp 0.5s ease-out;
-}
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
@@ -175,15 +172,6 @@
 }
 
 @media (max-width: 768px) {
-  .plantilla-section .section-header h2 {
-    font-size: 30px;
-    flex-direction: column;
-    gap: 8px;
-  }
-  
-  .plantilla-section .section-header h2::before {
-    font-size: 24px;
-  }
   
   .jugador-details {
     text-align: center;
@@ -219,13 +207,6 @@
 }
 
 @media (max-width: 480px) {
-  .plantilla-section .section-header h2 {
-    font-size: 24px;
-  }
-  
-  .plantilla-section .section-header p {
-    font-size: 16px;
-  }
   
   .jugadores-grid {
     grid-template-columns: 1fr;
