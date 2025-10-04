@@ -1,10 +1,15 @@
 /* historia.css - estilos simples para pages/historia.html */
 
+/* Fondo general rojo para esta página */
+body {
+  background-color: #A50044; /* rojo/granate */
+}
+
 /* HERO */
 .historia-hero.page-hero {
   padding: 56px 0;
-  background-color: #f5f7fb;
-  color: #003b6f;
+  background-color: transparent; /* deja ver el fondo rojo */
+  color: #ffffff;
 }
 .historia-hero .container {
   max-width: 1100px;
@@ -13,32 +18,33 @@
 .historia-hero h1 {
   margin: 0 0 8px;
   font-size: 28px;
-  color: #003b6f;
+  color: #ffffff;
 }
 .historia-hero .lead {
   margin: 0;
   font-size: 16px;
-  color: #555555;
+  color: #f0f0f0;
 }
 
-/* Secciones */
+/* Secciones: cajas azules */
 .historia-section.container {
   max-width: 1100px;
   margin: 16px auto;
   padding: 16px;
-  background-color: #ffffff;
-  border: 1px solid #e6e6e6;
+  background-color: #003b6f; /* azul */
+  color: #ffffff; /* texto claro sobre azul */
   border-radius: 8px;
+  border: none;
 }
 .historia-section h2 {
   font-size: 22px;
   margin: 0 0 10px;
-  color: #A50044; /* granate */
+  color: #ffffff;
 }
 .historia-section h3 {
   font-size: 18px;
   margin: 16px 0 8px;
-  color: #003b6f; /* azul */
+  color: #ffffff;
 }
 .historia-section p {
   line-height: 1.6;
@@ -66,15 +72,15 @@
   margin: 10px 0 16px;
 }
 
-/* Galerías */
+/* Galerías: menos columnas para que se vean más grandes */
 .historia-images h4 {
   margin: 12px 0 8px;
-  color: #003b6f;
+  color: #ffffff;
 }
 .gallery-grid {
   display: grid;
   gap: 12px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr); /* antes 3 -> ahora 2 para hacerlas más grandes */
 }
 .gallery-grid img {
   width: 100%;
@@ -83,15 +89,20 @@
   border-radius: 6px;
 }
 
-/* Miniaturas uniformes sólo para la galería histórica dedicada */
+/* Galería histórica con 3 columnas y miniaturas más altas */
+#galeria-historia .gallery-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
 #galeria-historia .gallery-grid img {
-  height: 180px;
+  height: 220px; /* antes 180px */
   object-fit: cover;
 }
 
 /* Trofeos */
 .trophies-grid {
   display: flex;
+  align-items: center;
+  justify-content: center; /* centra horizontalmente las tarjetas */
   gap: 12px;
   flex-wrap: wrap;
   margin-top: 12px;
@@ -103,7 +114,7 @@
   padding: 8px 12px;
   border: 1px solid #e6e6e6;
   border-radius: 8px;
-  background-color: #fafafa;
+  background-color: #fafafa; /* se mantiene claro para contraste sobre la caja azul */
 }
 .trophy img {
   width: 56px;
@@ -116,6 +127,7 @@
   display: block;
 }
 .trophy-meta .count {
+  color: #ffffff; /* se verá sobre caja azul; pero el número está dentro de caja clara? ajustamos a granate */
   color: #A50044;
   font-weight: 700;
 }
@@ -130,10 +142,16 @@ footer.footer {
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  #galeria-historia .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 680px) {
   .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  #galeria-historia .gallery-grid {
     grid-template-columns: 1fr;
   }
   .historia-hero h1 {
