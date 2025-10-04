@@ -1,5 +1,5 @@
 :root {
-    /* Colores principales */
+    /* Main Colors */
     --barca-blue: #004D98;
     --barca-blue-dark: #003366;
     --barca-red: #A50044;
@@ -17,8 +17,8 @@
     /* Tipografía */
     --font-heading: 'Poppins', sans-serif;
     --font-body: 'Roboto', sans-serif;
-    
-    /* Tamaños */
+
+    /* Font Sizes */
     --font-size-xs: 0.75rem;
     --font-size-sm: 0.875rem;
     --font-size-base: 1rem;
@@ -29,7 +29,7 @@
     --font-size-4xl: 2.25rem;
     --font-size-5xl: 3rem;
     
-    /* Espaciado */
+    /* Espacios */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
     --spacing-md: 1.5rem;
