@@ -84,29 +84,17 @@ h6 { font-size: var(--font-size-lg); }
   font-weight: 900;
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 .hero-subtitle {
   font-size: var(--font-size-xl);
   margin-bottom: var(--spacing-xl);
   text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
-  animation: fadeInUp 1s ease-out 0.2s both;
 }
 
 .hero-buttons {
   display: flex;
   gap: var(--spacing-md);
   justify-content: center;
-  animation: fadeInUp 1s ease-out 0.4s both;
 }
 
 .header {
@@ -992,19 +980,7 @@ h6 { font-size: var(--font-size-lg); }
   box-shadow: 0 4px 15px rgba(237, 187, 0, 0.4);
 }
 
-/* Gallery modal styles removed — site uses plain links to open images in a new tab (JS-free). */
 
-/* Animaciones */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
@@ -1058,33 +1034,20 @@ h6 { font-size: var(--font-size-lg); }
     margin-bottom: var(--spacing-md);
     letter-spacing: 3px;
     text-shadow: 3px 3px 8px rgba(0,0,0,0.8);
-    animation: fadeInUp 1s ease-out;
     font-weight: 900;
   }
-  
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+
   
   .hero-subtitle {
     font-size: var(--font-size-xl);
     margin-bottom: var(--spacing-xl);
     text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
-    animation: fadeInUp 1s ease-out 0.2s both;
   }
   
   .hero-buttons {
     display: flex;
     gap: var(--spacing-md);
     justify-content: center;
-    animation: fadeInUp 1s ease-out 0.4s both;
   }
   
   .header {
@@ -1928,19 +1891,8 @@ h6 { font-size: var(--font-size-lg); }
     box-shadow: 0 4px 15px rgba(237, 187, 0, 0.4);
   }
   
-  /* Gallery modal styles removed earlier in file — kept out because site is JS-free and images open in new tabs. */
   
-  /* Animaciones */
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+
   
   /* ===== RESPONSIVE ===== */
   @media (max-width: 1024px) {
@@ -2216,7 +2168,6 @@ h6 { font-size: var(--font-size-lg); }
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: glow 2s ease-in-out infinite alternate;
   }
 
   @keyframes glow {
