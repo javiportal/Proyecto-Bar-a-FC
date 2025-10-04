@@ -1,227 +1,261 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/x-icon" href="../static/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia - FC Barcelona</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/historia.css">
-    <title>Historia</title>
 </head>
 <body>
-    <!-- Mismo header del index.html) -->
+    
+    <!-- HEADER / NAVEGACIÓN -->
     <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <div class="logo">
-                    <img src="../img/Index_img/logo.jpg" alt="FC Barcelona Logo" class="logo-img">
-                    <h2>FC BARCELONA</h2>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="noticias.html">Noticias</a></li>
-                    <li><a href="plantilla.html">Plantilla</a></li>
-                    <li><a href="calendario.html">Calendario</a></li>
-                    <li><a href="tabla.html">Posiciones</a></li>
-                    <li><a href="historia.html" class="active">Historia</a></li>
-                    <li><a href="galeria.html">Galería</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                    <li><a href="acerca.html">Acerca de</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav class="navbar-new">
+            <!-- Logo y motto a la izquierda -->
+            <div class="nav-left">
+                <img src="../img/Calendario_img/Logo.png" alt="FC Barcelona Logo" class="nav-logo">
+                <p class="nav-motto">Més que un club</p>
+            </div>
+            
+            <!-- Barcelona en el centro -->
+            <div class="nav-center">
+                <h1 class="barcelona-title">BARCELONA</h1>
+            </div>
+            
+            <!-- Links a la derecha -->
+            <ul class="nav-links-right">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                <li><a href="plantilla.html">Plantilla</a></li>
+                <li><a href="calendario.html">Calendario</a></li>
+                <li><a href="tabla.html">Posiciones</a></li>
+                <li><a href="historia.html" class="active">Historia</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="acerca.html">Acerca de</a></li>
+            </ul>
+        </nav>
     </header>
-    <main>
-        <!-- Sección principal de historia -->
-        <section class="historia-hero page-hero">
-            <div class="container">
+    <!-- HERO SECCIÓN -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
                 <h1>Historia del FC Barcelona</h1>
-                <p class="lead">Aquí encontrarás un recorrido por los comienzos, las épocas más gloriosas 
-                    y la situación actual del club. Rellena cada sección con el contenido que prefieras.</p>
+                <p>Más de 125 años de pasión, gloria y tradición culé</p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Primeros años -->
-        <section id="primeros-anos" class="historia-section container">
-            <h2>Primeros años (1899 - 1930s)</h2>
-            <img src="../img/historia_img/Barca_General_Historia.jpg" alt="La Masía (ejemplo)">
-            <p class="placeholder">Fundado en el 29 de noviembre de 1899 por Hans Gamper, el 
-                FC Barcelona nació como un club formado por jugadores locales y extranjeros que compartían 
-                la pasión por el fútbol. En sus primeros años el club participó en torneos regionales y amistosos 
-                que sirvieron para consolidar su identidad y su hinchada. A lo largo de las primeras décadas, el Barcelona 
-                fue construyendo una cultura propia basada en la cercanía con la ciudad, la cantera y la búsqueda de un juego 
-                vistoso que le ganaría reconocimiento fuera de España.</p>
-            <div class="historia-images">
-                <h4>Fotos - Primeros años</h4>
-                <div class="gallery-grid">
-                    <img src="../img/historia_img/FC_Barcelona_1910.jpg" alt="1910)">
-                    <img src="../img/historia_img/foto_vieja.png" alt="1914">
+    <!-- TIMELINE DE HISTORIA -->
+    <section class="historia-timeline">
+        <div class="container">
+            <div class="timeline-header">
+                <h2>Línea del Tiempo</h2>
+                <p>Los momentos más importantes en la historia del FC Barcelona</p>
+            </div>
+            
+            <div class="timeline-container">
+                <!-- Primeros años -->
+                <div class="timeline-item">
+                    <div class="timeline-year">1899</div>
+                    <div class="timeline-content">
+                        <h3>Fundación del Club</h3>
+                        <p>El 29 de noviembre de 1899, Hans Gamper fundó el FC Barcelona en el Gimnasio Solé. Un grupo de entusiastas del fútbol se reunió para crear un club que representara a la ciudad de Barcelona.</p>
+                        <div class="timeline-image">
+                            <img src="../img/historia_img/FC_Barcelona_1910.jpg" alt="FC Barcelona 1910">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">1929</div>
+                    <div class="timeline-content">
+                        <h3>Primera Liga</h3>
+                        <p>El FC Barcelona conquistó su primera Liga española en la temporada 1928-29, estableciendo las bases de lo que sería una tradición de éxito en el fútbol español.</p>
+                        <img src="../img/historia_img/FC_Barceloa_primera.jpg" alt="FC Barcelona 1910">
+
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">1950s</div>
+                    <div class="timeline-content">
+                        <h3>Era de las 5 Copas</h3>
+                        <p>Con Ladislao Kubala como estrella, el Barça conquistó 5 Copas del Rey consecutivas entre 1951 y 1953, consolidando su identidad como club de referencia en España.</p>
+                        <img src="../img/historia_img/copa_del_rey.jpg" alt="FC Barcelona 1910">
+
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">1973</div>
+                    <div class="timeline-content">
+                        <h3>Llegada de Cruyff</h3>
+                        <p>Johan Cruyff llegó al FC Barcelona y revolucionó el fútbol español. Su influencia marcó el inicio de una nueva era en el club, tanto como jugador como posteriormente como entrenador.</p>
+                        <img src="../img/historia_img/cruyff.jpg" alt="FC Barcelona 1910">
+
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">1992</div>
+                    <div class="timeline-content">
+                        <h3>Primera Copa de Europa</h3>
+                        <p>El Dream Team de Cruyff conquistó la primera Copa de Europa del club en Wembley, venciendo a la Sampdoria 1-0 con gol de Ronald Koeman en la prórroga.</p>
+                        <div class="timeline-image">
+                            <img src="../img/historia_img/dreamteam.jpg" alt="Dream Team 1992">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2009</div>
+                    <div class="timeline-content">
+                        <h3>El Sextete</h3>
+                        <p>Bajo la dirección de Pep Guardiola, el FC Barcelona conquistó los 6 títulos posibles en una sola temporada: Liga, Copa del Rey, Champions League, Supercopa de España, Supercopa de Europa y Mundial de Clubes.</p>
+                        <div class="timeline-image">
+                            <img src="../img/historia_img/Barca 2015.jpg" alt="Barça 2009">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2015</div>
+                    <div class="timeline-content">
+                        <h3>El Triplete MSN</h3>
+                        <p>Con Messi, Suárez y Neymar formando el tridente más letal de la historia, el Barça conquistó su segundo triplete (Liga, Copa del Rey y Champions League) bajo la dirección de Luis Enrique.</p>
+                        <div class="timeline-image">
+                            <img src="../img/historia_img/2015.jpg" alt="Barça 2015">
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
-        <!-- Mejores annos -->
-        <section id="mejores-anos" class="historia-section container">
-            <h2>Mejores años</h2>
-            <p class="placeholder">A lo largo de su historia el club ha tenido varias épocas doradas. Desde la consolidación 
-                como fuerza nacional en las décadas centrales del siglo XX, hasta la revolución táctica y deportiva impulsada 
-                por Johan Cruyff en los años 90. Más adelante, la era de Pep Guardiola (2008-2012) introdujo un estilo de juego 
-                basado en la posesión y la presión alta que rindió múltiples títulos nacionales e internacionales. En todas estas 
-                etapas, La Masía y la apuesta por el talento joven han sido factores clave en el éxito del club.</p>
-
-            <div class="highlights">
-                <h3>Épocas destacadas</h3>
-                <ul>
-                <li><strong>1899–1929</strong> - Fundación y primeros títulos (1.ª Liga en 1929).</li>
-                <li><strong>1948–1953</strong> - Era de las 5 Copas (Kubala, Ramallets).</li>
-                <li><strong>1973–1978</strong> - Cruyff jugador; Liga 1973–74.</li>
-                <li><strong>1988–1996</strong> - Dream Team de Cruyff; 4 Ligas seguidas y 1.ª Copa de Europa (1992).</li>
-                <li><strong>2003–2008</strong> - Ronaldinho/Rijkaard; Champions 2006.</li>
-                <li><strong>2008–2012</strong> - Pep Guardiola; tiki-taka y sextete 2009 (Champions 2009 y 2011).</li>
-                <li><strong>2014–2017</strong> - MSN con Luis Enrique; triplete 2015.</li>
-                <li><strong>2017–2021</strong> - Últimos años de Messi; ligas y crisis europea.</li>
-                <li><strong>2021–2025</strong> - Reconstrucción; Liga 2022–23 y protagonismo de la cantera.</li>
-                </ul>
+        </div>
+    </section>
+    <!-- TROFEOS Y LOGROS -->
+    <section class="historia-trofeos">
+        <div class="container">
+            <div class="trofeos-header">
+                <h2>Palmarés del FC Barcelona</h2>
+                <p>Una historia llena de títulos y gloria</p>
             </div>
-            <div class="historia-images">
-                <h4>Fotos - Mejores años</h4>
-                <div class="gallery-grid">
-                    <img src="../img/historia_img/DreamTeam_Barca.jpg" alt="Dream Team (ejemplo)">
-                    <img src="../img/historia_img/Barca 2015.jpg" alt="Celebración (ejemplo)">                   
-                </div>
-            </div>
-        </section>
-        <section id="dream-team-1992" class="historia-section container">
-            <h2>Dream Team (Johan Cruyff, 1992)</h2>
-            <p class="placeholder">El 'Dream Team' de Johan Cruyff (finales de los 80 y principios de los 90) transformó 
-                al Barcelona en un referente del fútbol moderno. Con una filosofía inspirada en el 'fútbol total', Cruyff 
-                impulsó un modelo de juego colectivo, técnico y ofensivo. El punto culminante llegó en 1992, cuando el 
-                equipo ganó su primera Copa de Europa tras vencer a la Sampdoria en Wembley gracias a un cabezazo de Ronald 
-                Koeman en la prórroga. Jugadores como Pep Guardiola, Ronald Koeman, Hristo Stoichkov, Michael Laudrup y Txiki Begiristain 
-                fueron piezas clave de aquel conjunto histórico, cuyo legado todavía influye en la identidad del club.</p>
-
-            <div class="historia-images">
-                <h4>Fotos - Dream Team</h4>
-                <div class="gallery-grid">
-                    <img src="../img/historia_img/dreamteam.jpg" alt="Dream Team (ejemplo)">
-                </div>
-            </div>
-        </section>
-
-        <!-- Barça 2015 (Champions) -->
-        <section id="barca-2015" class="historia-section container">
-            <h2>Barça 2015 - Champions</h2>
-            <p class="placeholder">La temporada 2014-2015 fue otra cumbre en la historia reciente del club. Bajo la dirección de 
-                Luis Enrique, el Barcelona formó un tridente ofensivo letal —Messi, Suárez y Neymar (la famosa MSN)— que combinó talento, 
-                velocidad y eficacia. Aquella temporada el equipo consiguió el triplete (Liga, Copa del Rey y Champions League), culminando 
-                con la victoria por 3-1 frente a la Juventus en la final de Berlín. El éxito de 2015 reafirmó la capacidad del club para combinar 
-                cantera, fichajes clave y un estilo de juego atractivo.</p>
-
-            <div class="historia-images">
-                <h4>Fotos - Barça 2015</h4>
-                <div class="gallery-grid">
-                    <img src="../img/historia_img/2015.jpg" alt="Barça 2015 (ejemplo)">
-                </div>
-            </div>
-        </section>
-        <section id="actualidad" class="historia-section container">
-            <h2>Cómo están ahora</h2>
-            <p class="placeholder">En 2025 el FC Barcelona sigue siendo uno de los clubes más seguidos del mundo y 
-                mantiene la ambición de competir en lo más alto tanto en La Liga como en Europa. Tras períodos de 
-                reconstrucción, el club ha reforzado su apuesta por la cantera —con jugadores surgidos de La Masía—
-                y por la mezcla entre juventud y experiencia. A nivel institucional se trabaja en la estabilidad 
-                económica y en proyectos para modernizar instalaciones y conectar aún más con la afición. El objetivo 
-                permanente es recuperar y consolidar la competitividad en todas las competiciones.</p>
-
-            <div class="current-stats">
-                <h3>Datos actuales (2025)</h3>
-                <ul>
-                    <li>Competición principal: La Liga / Champions League</li>
-                    <li>Estadio: Spotify Camp Nou</li>
-                    <li>Director técnico: (pon aquí el nombre actual)</li>
-                    <li>Año: 2025</li>
-                </ul>
-            </div>
-
-            <div class="historia-images">
-                <h4>Fotos - Actualidad (2025)</h4>
-                <div class="gallery-grid">
-                    <img src="../img/historia_img/ganadores.png" alt="Entrenamiento 2025 (ejemplo)">
-                    <img src="../img/historia_img/ganadores2.jpg" alt="Gavi 2025 (ejemplo)">
-                </div>
-            </div>
-        </section>
-        <!-- Sección de trofeos (PNGs y contadores) -->
-        <section id="trofeos" class="historia-section container">
-            <h2>Trofeos</h2>
+            
             <div class="trophies-grid">
-                <!-- Ejemplo de trofeo: sustituye las imágenes por las tuyas -->
-                <div class="trophy">
-                    <img src="../img/historia_img/champions_trophy.png" alt="Champions League">
-                    <div class="trophy-meta">
-                        <strong>Champions League</strong>
-                        <span class="count">5</span>
+                <div class="trophy-card">
+                    <div class="trophy-icon">🏆</div>
+                    <div class="trophy-info">
+                        <h3>Champions League</h3>
+                        <span class="trophy-count">5</span>
+                        <p>1992, 2006, 2009, 2011, 2015</p>
                     </div>
                 </div>
 
-                <div class="trophy">
-                    <img src="../img/historia_img/LaLiga.png" alt="La Liga">
-                    <div class="trophy-meta">
-                        <strong>La Liga</strong>
-                        <span class="count">26</span>
+                <div class="trophy-card">
+                    <div class="trophy-icon">🥇</div>
+                    <div class="trophy-info">
+                        <h3>La Liga</h3>
+                        <span class="trophy-count">26</span>
+                        <p>Última: 2022-23</p>
                     </div>
                 </div>
 
-                <div class="trophy">
-                    <img src="../img/historia_img/CopaRey.png" alt="Copa del Rey">
-                    <div class="trophy-meta">
-                        <strong>Copa del Rey</strong>
-                        <span class="count">31</span>
+                <div class="trophy-card">
+                    <div class="trophy-icon">🏆</div>
+                    <div class="trophy-info">
+                        <h3>Copa del Rey</h3>
+                        <span class="trophy-count">31</span>
+                        <p>Última: 2020-21</p>
+                    </div>
+                </div>
+
+                <div class="trophy-card">
+                    <div class="trophy-icon">🌍</div>
+                    <div class="trophy-info">
+                        <h3>Mundial de Clubes</h3>
+                        <span class="trophy-count">3</span>
+                        <p>2009, 2011, 2015</p>
                     </div>
                 </div>
             </div>
-        </section>
-        <section id="galeria-historia" class="galeria-historica container">
-            <h2>Galería histórica</h2>
-            <div class="gallery-grid gallery-large">
-                <!-- 9 huecos preparados para tus imágenes. Coloca tus archivos en: img/historia_img/galeria historica/ -->
-                <figure>
-                    <img src="../img/historia_img/galeria historica/foto_1.jpg" alt="Galería histórica 1">
-                </figure>
-                <figure>
-                    <img src="../img/historia_img/galeria historica/foto_2.jpg" alt="Galería histórica 2">
-                </figure>
-                <figure>
-                    <img src="../img/historia_img/galeria historica/foto_3.jpg" alt="Galería histórica 3">
-                </figure>
-                <figure>
-                    <img src="../img/historia_img/galeria historica/foto_4.jpg" alt="Galería histórica 4">
-                </figure>
-                <figure>
-                    <img src="../img/historia_img/galeria historica/foto_5.jpg" alt="Galería histórica 5">
-                </figure>
-                <figure>
-                    <img src="../img/historia_img/galeria historica/foto_6.webp" alt="Galería histórica 6">
-                </figure>
-                <figure>
-                    <img src="../img/historia_img/galeria historica/foto_7.webp" alt="Galería histórica 7">
-                </figure>
-                <figure>
-                    <img src="../img/historia_img/galeria historica/foto_8.webp" alt="Galería histórica 8">
-                </figure>
-                <figure>
-                    <img src="../img/historia_img/galeria historica/foto_9.webp" alt="Galería histórica 9">
-                </figure>
-                <figure>
-                    <img src="../img/historia_img/galeria historica/foto_10.jpg" alt="Galería histórica 10">
-                </figure>
-                <figure>
-                    <img src="../img/historia_img/galeria historica/foto_11.jpg" alt="Galería histórica 11">
-                </figure>
-                <figure>
-                    <img src="../img/historia_img/galeria historica/foto_12.webp" alt="Galería histórica 12">
-                </figure>
+        </div>
+    </section>
+
+    <!-- GALERÍA HISTÓRICA -->
+    <section class="historia-galeria">
+        <div class="container">
+            <div class="galeria-header">
+                <h2>Galería Histórica</h2>
+                <p>Momentos inolvidables en la historia del FC Barcelona</p>
             </div>
-        </section>
+            
+            <div class="galeria-grid">
+                <div class="galeria-item">
+                    <img src="../img/historia_img/galeria historica/foto_1.jpg" alt="Historia del Barça">
+                    <div class="galeria-overlay">
+                        <h4>Fundación</h4>
+                        <p>1899</p>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img src="../img/historia_img/galeria historica/foto_2.jpg" alt="Historia del Barça">
+                    <div class="galeria-overlay">
+                        <h4>Primeros Años</h4>
+                        <p>1900s</p>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img src="../img/historia_img/galeria historica/foto_3.jpg" alt="Historia del Barça">
+                    <div class="galeria-overlay">
+                        <h4>Primera Liga</h4>
+                        <p>1929</p>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img src="../img/historia_img/galeria historica/foto_4.jpg" alt="Historia del Barça">
+                    <div class="galeria-overlay">
+                        <h4>Era Kubala</h4>
+                        <p>1950s</p>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img src="../img/historia_img/galeria historica/foto_5.jpg" alt="Historia del Barça">
+                    <div class="galeria-overlay">
+                        <h4>Dream Team</h4>
+                        <p>1992</p>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img src="../img/historia_img/galeria historica/foto_6.webp" alt="Historia del Barça">
+                    <div class="galeria-overlay">
+                        <h4>Guardiola Era</h4>
+                        <p>2008-2012</p>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img src="../img/historia_img/galeria historica/foto_7.webp" alt="Historia del Barça">
+                    <div class="galeria-overlay">
+                        <h4>MSN Triplete</h4>
+                        <p>2015</p>
+                    </div>
+                </div>
+                <div class="galeria-item">
+                    <img src="../img/historia_img/galeria historica/foto_8.webp" alt="Historia del Barça">
+                    <div class="galeria-overlay">
+                        <h4>Actualidad</h4>
+                        <p>2025</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     </main>
     <!-- Footer, mismo del index.html -->
     <footer class="footer">
