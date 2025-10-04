@@ -66,7 +66,7 @@ h6 { font-size: var(--font-size-lg); }
 
 
 .hero-main {
-  background: url('../img/Galeria_img/camp-nou-1.jpg') center/cover;
+  background: url('../img/camp nou 1.webp') center/cover;
   min-height: 600px;
   display: flex;
   align-items: center;
@@ -1019,7 +1019,7 @@ h6 { font-size: var(--font-size-lg); }
   
   /* ===== HERO PRINCIPAL (INDEX) ===== */
   .hero-main {
-    background: url('../img/Galeria_img/camp-nou-1.jpg') center/cover;
+    background: url('../img/camp nou 1.webp') center/cover;
     min-height: 600px;
     display: flex;
     align-items: center;
@@ -2170,14 +2170,6 @@ h6 { font-size: var(--font-size-lg); }
     background-clip: text;
   }
 
-  @keyframes glow {
-    from {
-      text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
-    }
-    to {
-      text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5), 0 0 30px rgba(255, 255, 255, 0.6);
-    }
-  }
 
   /* Logo y motto (centrado sobre el motto) */
   .nav-left {
