@@ -988,77 +988,7 @@ h6 { font-size: var(--font-size-lg); }
   box-shadow: 0 4px 15px rgba(237, 187, 0, 0.4);
 }
 
-/* Modal de galería */
-.modal-galeria {
-  display: none;
-  position: fixed;
-  z-index: 2000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.9);
-  backdrop-filter: blur(5px);
-}
-
-.modal-content {
-  position: relative;
-  margin: 5% auto;
-  width: 90%;
-  max-width: 800px;
-  background-color: var(--white);
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-}
-
-.modal-cerrar {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  color: var(--white);
-  font-size: 2rem;
-  font-weight: bold;
-  cursor: pointer;
-  z-index: 2001;
-  background-color: rgba(0,0,0,0.5);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s;
-}
-
-.modal-cerrar:hover {
-  background-color: var(--barca-red);
-  transform: scale(1.1);
-}
-
-#modal-imagen {
-  width: 100%;
-  height: auto;
-  max-height: 500px;
-  object-fit: cover;
-}
-
-.modal-info {
-  padding: var(--spacing-lg);
-  text-align: center;
-}
-
-.modal-info h3 {
-  color: var(--barca-blue);
-  font-size: 1.8rem;
-  margin-bottom: var(--spacing-sm);
-}
-
-.modal-info p {
-  color: var(--gray-dark);
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
+/* Gallery modal styles removed — site uses plain links to open images in a new tab (JS-free). */
 
 /* Animaciones */
 @keyframes fadeInUp {
@@ -1996,77 +1926,7 @@ h6 { font-size: var(--font-size-lg); }
     box-shadow: 0 4px 15px rgba(237, 187, 0, 0.4);
   }
   
-  /* Modal de galería */
-  .modal-galeria {
-    display: none;
-    position: fixed;
-    z-index: 2000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.9);
-    backdrop-filter: blur(5px);
-  }
-  
-  .modal-content {
-    position: relative;
-    margin: 5% auto;
-    width: 90%;
-    max-width: 800px;
-    background-color: var(--white);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-  }
-  
-  .modal-cerrar {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    color: var(--white);
-    font-size: 2rem;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 2001;
-    background-color: rgba(0,0,0,0.5);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s;
-  }
-  
-  .modal-cerrar:hover {
-    background-color: var(--barca-red);
-    transform: scale(1.1);
-  }
-  
-  #modal-imagen {
-    width: 100%;
-    height: auto;
-    max-height: 500px;
-    object-fit: cover;
-  }
-  
-  .modal-info {
-    padding: var(--spacing-lg);
-    text-align: center;
-  }
-  
-  .modal-info h3 {
-    color: var(--barca-blue);
-    font-size: 1.8rem;
-    margin-bottom: var(--spacing-sm);
-  }
-  
-  .modal-info p {
-    color: var(--gray-dark);
-    font-size: 1.1rem;
-    line-height: 1.6;
-  }
+  /* Gallery modal styles removed earlier in file — kept out because site is JS-free and images open in new tabs. */
   
   /* Animaciones */
   @keyframes fadeInUp {
@@ -2258,10 +2118,7 @@ h6 { font-size: var(--font-size-lg); }
       height: 200px;
     }
     
-    .modal-content {
-      width: 95%;
-      margin: 10% auto;
-    }
+    /* responsive modal removed for JS-free design */
     
     .page-hero-content h1 {
       font-size: var(--font-size-3xl);
