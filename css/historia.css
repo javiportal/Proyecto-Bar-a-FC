@@ -93,6 +93,76 @@ h1, h2, h3, h4 {
   font-size: 16px;
 }
 
+/* Centrar el bloque de datos actuales (current-stats) */
+.current-stats {
+  text-align: center;
+  margin-top: 12px;
+}
+.current-stats ul {
+  display: inline-block;
+  text-align: left;
+  padding-left: 18px;
+  margin: 8px 0 0;
+  max-width: 720px;
+}
+.current-stats li {
+  margin: 6px 0;
+  color: #FFFFFF;
+  font-size: 16px;
+}
+
+/* Caja interior para listas (caja dentro de caja) */
+.inner-box {
+  background-color: #A50044; /* caja roja (barca) dentro de la caja azul */
+  color: #FFFFFF; /* texto claro dentro de la caja roja */
+  padding: 12px; /* spacing */
+  border-radius: 6px;
+  max-width: 600px; /* menos ancho para que no sea tan larga */
+  margin: 8px auto 0; /* centrado */
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+.inner-box ul {
+  margin: 0;
+  padding-left: 18px;
+}
+.inner-box li {
+  margin: 6px 0;
+  color: #FFFFFF;
+  font-size: 16px;
+}
+
+/* Contenedor para la galería histórica */
+.gallery-box {
+  background-color: #004D98; /* usar mismo azul de las otras cajas */
+  color: #FFFFFF; /* texto claro */
+  padding: 16px;
+  border-radius: 8px;
+  max-width: 1120px;
+  margin: 12px auto 0;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.16);
+  transition: box-shadow 180ms ease, transform 180ms ease;
+}
+.gallery-box:hover {
+  box-shadow: 0 20px 48px rgba(0,0,0,0.28);
+  transform: translateY(-4px);
+}
+.gallery-box h2 {
+  color: #FFFFFF; /* título blanco dentro de caja azul */
+  margin: 0 0 12px;
+}
+.gallery-box .gallery-grid {
+  gap: 12px;
+}
+/* Imágenes dentro de la gallery-box: sombra base y hover más marcado */
+.gallery-box .gallery-grid img {
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+.gallery-box .gallery-grid img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 24px 48px rgba(0,0,0,0.32);
+}
+
 /* Timeline */
 .timeline {
   margin-top: 12px;
