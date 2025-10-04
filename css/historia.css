@@ -1,15 +1,15 @@
 /* historia.css - usar esto para el html*/
 
-/* Fondo general rojo */
+/* Fondo general rojo para esta página */
 body {
-  background-color: #A50044; /* rojo/granate */
+  background-color: #A50044; /* barca-red */
 }
 
 /* HERO */
 .historia-hero.page-hero {
   padding: 56px 0;
   background-color: transparent; /* deja ver el fondo rojo */
-  color: #ffffff;
+  color: #FFFFFF;
 }
 .historia-hero .container {
   max-width: 1100px;
@@ -17,13 +17,13 @@ body {
 }
 .historia-hero h1 {
   margin: 0 0 8px;
-  font-size: 28px;
-  color: #ffffff;
+  font-size: 34px; /* aumentado para títulos principales */
+  color: #FFFFFF;
 }
 .historia-hero .lead {
   margin: 0;
   font-size: 16px;
-  color: #f0f0f0;
+  color: #F5F5F5; /* gray-lighter */
 }
 
 /* Secciones: cajas azules */
@@ -31,24 +31,46 @@ body {
   max-width: 1100px;
   margin: 16px auto;
   padding: 16px;
-  background-color: #003b6f; /* azul */
-  color: #ffffff; /* texto claro sobre azul */
+  background-color: #004D98; /* barca-blue */
+  color: #FFFFFF; /* texto claro sobre azul */
   border-radius: 8px;
   border: none;
 }
 .historia-section h2 {
-  font-size: 22px;
+  font-size: 26px; /* aumentado */
   margin: 0 0 10px;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 .historia-section h3 {
-  font-size: 18px;
+  font-size: 20px; /* aumentado */
   margin: 16px 0 8px;
-  color: #ffffff;
+  color: #FFFFFF;
+}
+.historia-section h4 {
+  font-size: 18px; /* ligeramente mayor */
+  margin-top: 12px;
+  color: #FFFFFF;
 }
 .historia-section p {
   line-height: 1.6;
   margin: 8px 0 0;
+}
+
+/* Centramos el bloque de bulletpoints dentro de .highlights */
+.highlights {
+  text-align: center; /* centro el contenedor */
+  margin-top: 8px;
+}
+.highlights ul {
+  display: inline-block; /* para centrar el bloque */
+  text-align: left; /* mantener las líneas alineadas a la izquierda dentro del bloque */
+  padding-left: 18px; /* espacio para viñetas */
+  margin: 8px 0 0;
+  max-width: 760px; /* limitar ancho para mejor lectura */
+}
+.highlights li {
+  margin: 6px 0;
+  color: #FFFFFF; /* asegurar contraste en cajas azules */
 }
 
 /* Timeline */
@@ -75,7 +97,7 @@ body {
 /* Galerías: menos columnas para que se vean más grandes */
 .historia-images h4 {
   margin: 12px 0 8px;
-  color: #ffffff;
+  color: #FFFFFF;
 }
 .gallery-grid {
   display: grid;
@@ -112,9 +134,9 @@ body {
   align-items: center;
   gap: 10px;
   padding: 8px 12px;
-  border: 1px solid #e6e6e6;
+  border: 1px solid #E5E5E5; /* gray-light */
   border-radius: 8px;
-  background-color: #fafafa; /* se mantiene claro para contraste sobre la caja azul */
+  background-color: #FFFFFF; /* blanco para contraste con caja azul */
 }
 .trophy img {
   width: 56px;
@@ -123,12 +145,11 @@ body {
   display: block;
 }
 .trophy-meta strong {
-  color: #003b6f;
+  color: #003366; /* barca-blue-dark */
   display: block;
 }
 .trophy-meta .count {
-  color: #ffffff; /* se verá sobre caja azul; pero el número está dentro de caja clara? ajustamos a granate */
-  color: #A50044;
+  color: #A50044; /* barca-red */
   font-weight: 700;
 }
 
