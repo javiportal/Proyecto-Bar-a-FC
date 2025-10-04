@@ -151,36 +151,7 @@
         </div>
     </section>
 
-    <script>
-        // Validación y envío del formulario
-        const form = document.getElementById('formContacto');
-        const mensajeExito = document.getElementById('mensajeExito');
-
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            if (form.checkValidity()) {
-                mensajeExito.style.display = 'block';
-                form.reset();
-                
-                setTimeout(() => {
-                    mensajeExito.style.display = 'none';
-                }, 5000);
-                
-                mensajeExito.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            } else {
-                form.reportValidity();
-            }
-        });
-
-        const inputs = form.querySelectorAll('input, textarea');
-        inputs.forEach(input => {
-            input.addEventListener('blur', function() {
-                if (this.value) {
-                    this.checkValidity();
-                }
-            });
-        });
-    </script>
+</body>
+</html>
 </body>
 </html>
